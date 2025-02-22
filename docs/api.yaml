@@ -1,0 +1,1518 @@
+openapi: 3.0.1
+info:
+  title: NETrunnerFLIX Api
+  version: 1.0.0
+servers:
+  - url: http://localhost:80
+tags:
+  - name: Auth
+  - name: Films
+  - name: Profile
+  - name: Actors
+
+paths:
+
+  # Auth
+
+  /auth/signup:
+    post:
+      tags:
+        - Auth
+      summary: Register new user
+      security:
+        - AccessCookie: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SignupRequest'
+      responses:
+        '200':
+          description: Success
+          headers:
+            Set-Cookie (access):
+              description: Access token
+              schema:
+                type: string
+                example: access=sfggafga.SDFDGsf.dsFdFDD; Path=/; HttpOnly; Secure
+            Set-Cookie (refresh):
+              description: Refresh token
+              schema:
+                type: string
+                example: refresh=sfggafga.SDFDGsf.dsFdFDD; Path=/auth; HttpOnly; Secure
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '400':
+          description: Invalid data recieved or user already exists
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  /auth/login:
+    post:
+      tags:
+        - Auth
+      summary: Login user
+      security:
+        - AccessCookie: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+      responses:
+        '200':
+          description: Success
+          headers:
+            Set-Cookie (access):
+              description: Access token
+              schema:
+                type: string
+                example: access=sfggafga.SDFDGsf.dsFdFDD; Path=/; HttpOnly; Secure
+            Set-Cookie (refresh):
+              description: Refresh token
+              schema:
+                type: string
+                example: refresh=sfggafga.SDFDGsf.dsFdFDD; Path=/auth; HttpOnly; Secure
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '400':
+          description:  User doesn't exists or incorrect login or password
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  /auth/check:
+    post:
+      tags:
+        - Auth
+      summary: Check for valid session
+      security:
+        - AccessCookie: []
+        - RefreshCookie: []
+      responses:
+        '200':
+          description: Success (regenerate tokens if access expired)
+          headers:
+            Set-Cookie (access):
+              description: Access token
+              schema:
+                type: string
+                example: access=sfggafga.SDFDGsf.dsFdFDD; Path=/; HttpOnly; Secure
+            Set-Cookie (refresh):
+              description: Refresh token
+              schema:
+                type: string
+                example: refresh=sfggafga.SDFDGsf.dsFdFDD; Path=/auth; HttpOnly; Secure
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '401':
+          description:  Not authorized
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  /auth/logout:
+    post:
+      tags:
+        - Auth
+      summary: Logout user
+      security:
+        - RefreshCookie: []
+      responses:
+        '200':
+          description: Success
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '401':
+          description:  Not authorized
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  # Films
+
+  /films/all:
+    get:
+      tags:
+        - Films
+      summary: Get all films
+      parameters:
+        - name: page
+          in: query
+          description: films page number
+          required: true
+          content:
+            application/form:
+              schema:
+                type: integer
+                example: 3
+      responses:
+        '200':
+          description: Success
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/FilmsResponse'
+        '401':
+          description: Not authorized
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  /films/{uuid}/data:
+    get:
+      tags:
+        - Films
+      summary: Get the film with given uuid
+      security:
+        - AccessCookie: []
+      parameters:
+        - name: uuid
+          in: path
+          description: Uuid of the film
+          required: true
+          content:
+            application/form:
+              schema:
+                type: string
+                example: frfdF48AfJ1MAFfKF13KFAOS
+      responses:
+        '200':
+          description: Success
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/FilmResponse'
+        '400':
+          description: Incorrect film uuid
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '401':
+          description: Not authorized
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '403':
+          description: Too young for this film
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  /films/{uuid}/comments:
+    get:
+      tags:
+        - Films
+      summary: Get some comments of the film with given uuid
+      security:
+        - AccessCookie: []
+      parameters:
+        - name: uuid
+          in: path
+          description: Uuid of the film
+          required: true
+          content:
+            application/form:
+              schema:
+                type: string
+                example: frfdF48AfJ1MAFfKF13KFAOS
+        - name: page
+          in: query
+          description: comments page number
+          required: true
+          content:
+            application/form:
+              schema:
+                type: integer
+                example: 3
+      responses:
+        '200':
+          description: Success
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/CommentsResponse'
+        '400':
+          description: Incorrect film uuid
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '401':
+          description: Not authorized
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  /films/comments/add:
+    post:
+      tags:
+        - Films
+      summary: Add comment to film with given uuid and given user uuid
+      security:
+        - AccessCookie: [ ]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewCommentRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '400':
+          description: Incorrect film uuid or user uuid
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '401':
+          description: Not authorized
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  /films/comments/remove:
+    post:
+      tags:
+        - Films
+      summary: Remove comment to film with given uuid and given user uuid
+      security:
+        - AccessCookie: [ ]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewCommentRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '400':
+          description: Incorrect film uuid or user uuid
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '401':
+          description: Not authorized
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  /films/{uuid}/actors:
+    get:
+      tags:
+        - Films
+      summary: Get actors of the film with given uuid
+      security:
+        - AccessCookie: []
+      parameters:
+        - name: uuid
+          in: path
+          description: Uuid of the film
+          required: true
+          content:
+            application/form:
+              schema:
+                type: string
+                example: frfdF48AfJ1MAFfKF13KFAOS
+      responses:
+        '200':
+          description: Success
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/ActorsResponse'
+        '400':
+          description: Incorrect film uuid
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '401':
+          description: Not authorized
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  /films/add:
+    post:
+      tags:
+        - Films
+      summary: Add new film
+      security:
+        - AccessCookie: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewFilmRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '401':
+          description: Not authorized
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '403':
+          description: Permissions denied
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  /films/genres/preview:
+    get:
+      tags:
+        - Films
+      summary: get some film previews from all genres
+      security:
+        - AccessCookie: []
+      responses:
+        '200':
+          description: Success
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/AllGenresResponse'
+        '401':
+          description: Not authorized
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  /films/genres/{genre}/all:
+    get:
+      tags:
+        - Films
+      summary: get all films with given genre
+      parameters:
+        - name: genre
+          in: path
+          description: Genre of the film
+          required: true
+          content:
+            application/form:
+              schema:
+                type: string
+                example: 'fantasy'
+      security:
+        - AccessCookie: []
+      responses:
+        '200':
+          description: Success
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/GenreResponse'
+        '401':
+          description: Not authorized
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  /films/find:
+    get:
+      tags:
+        - Films
+      summary: Find films
+      security:
+        - AccessCookie: []
+      parameters:
+        - name: search
+          in: query
+          description: Film title
+          required: true
+          content:
+            application/form:
+              schema:
+                type: string
+                example: 'Transformers'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/FilmsResponse'
+        '400':
+          description: Incorrect actor uuid
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  # Profile
+
+  /profile/{uuid}/data:
+    get:
+      tags:
+        - Profile
+      summary: Get user profile
+      security:
+        - AccessCookie: []
+      parameters:
+        - name: uuid
+          in: path
+          description: Uuid of the user
+          required: true
+          content:
+            application/form:
+              schema:
+                type: string
+                example: frfdF48AfJ1MAFfKF13KFAOS
+      responses:
+        '200':
+          description: Success
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+        '401':
+          description: Not authorized
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '404': # if you are trying to get someone's else profile
+          description: Incorrect user uuid
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  /profile/{uuid}/preview:
+    get:
+      tags:
+        - Profile
+      summary: Get user preview
+      security:
+        - AccessCookie: []
+      parameters:
+        - name: uuid
+          in: path
+          description: Uuid of the user
+          required: true
+          content:
+            application/form:
+              schema:
+                type: string
+                example: frfdF48AfJ1MAFfKF13KFAOS
+      responses:
+        '200':
+          description: Success
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/ProfilePreviewResponse'
+        '401':
+          description: Not authorized
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '404': # if you are trying to get someone's else profile
+          description: Incorrect user uuid
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  /profile/{uuid}/edit:
+    put:
+      tags:
+        - Profile
+      summary: Get user preview
+      security:
+        - AccessCookie: []
+      parameters:
+        - name: uuid
+          in: path
+          description: Uuid of the user
+          required: true
+          content:
+            application/form:
+              schema:
+                type: string
+                example: frfdF48AfJ1MAFfKF13KFAOS
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ProfileEditRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '401':
+          description: Not authorized
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '404': # if you are trying to get someone's else profile
+          description: Incorrect user uuid
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  /profile/{uuid}/favourites/add:
+    post:
+      tags:
+        - Profile
+      summary: Get user preview
+      security:
+        - AccessCookie: []
+      parameters:
+        - name: uuid
+          in: path
+          description: Uuid of the user
+          required: true
+          content:
+            application/form:
+              schema:
+                type: string
+                example: frfdF48AfJ1MAFfKF13KFAOS
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/FilmLinkRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '401':
+          description: Not authorized
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '404': # if you are trying to get someone's else profile
+          description: Incorrect user uuid
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  /profile/{uuid}/favourites/remove:
+    post:
+      tags:
+        - Profile
+      summary: Get user preview
+      security:
+        - AccessCookie: []
+      parameters:
+        - name: uuid
+          in: path
+          description: Uuid of the user
+          required: true
+          content:
+            application/form:
+              schema:
+                type: string
+                example: frfdF48AfJ1MAFfKF13KFAOS
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/FilmLinkRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '401':
+          description: Not authorized
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '404': # if you are trying to get someone's else profile
+          description: Incorrect user uuid
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  /profile/{uuid}/favourites/all:
+    get:
+      tags:
+        - Profile
+      summary: Get films from favourites
+      security:
+        - AccessCookie: []
+      parameters:
+        - name: uuid
+          in: path
+          description: Uuid of the user
+          required: true
+          content:
+            application/form:
+              schema:
+                type: string
+                example: frfdF48AfJ1MAFfKF13KFAOS
+      responses:
+        '200':
+          description: Success
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/FilmsResponse'
+        '401':
+          description: Not authorized
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '404': # if you are trying to get someone's else profile
+          description: Incorrect user uuid
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  # Actors
+
+  /actors/{uuid}:
+    get:
+      tags:
+        - Actors
+      summary: Get information about actor with given uuid
+      security:
+        - AccessCookie: []
+      parameters:
+        - name: uuid
+          in: path
+          description: Uuid of the actor
+          required: true
+          content:
+            application/form:
+              schema:
+                type: string
+                example: frfdF48AfJ1MAFfKF13KFAOS
+      responses:
+        '200':
+          description: Success
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/ActorResponse'
+        '400':
+          description: Incorrect actor uuid
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '401':
+          description: Not authorized
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  /actors/add:
+    post:
+      tags:
+        - Actors
+      summary: Add new actor
+      security:
+        - AccessCookie: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewActorRequest'
+      responses:
+        '200  ':
+          description: Success
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '400':
+          description: Incorrect actor uuid
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '401':
+          description: Not authorized
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '403':
+          description: Permissions denied
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+  /actors/find:
+    get:
+      tags:
+        - Actors
+      summary: Find actor
+      security:
+        - AccessCookie: []
+      parameters:
+        - name: search
+          in: query
+          description: Actor name
+          required: true
+          content:
+            application/form:
+              schema:
+                type: string
+                example: 'Ryan Gosling'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/ActorsResponse'
+        '400':
+          description: Incorrect actor uuid
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/form:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+        default:
+          description: Unknown error
+
+components:
+
+  # Cookies
+
+  securitySchemes:
+
+    AccessCookie:
+      type: apiKey
+      in: cookie
+      name: access
+
+    RefreshCookie:
+      type: apiKey
+      in: cookie
+      name: refresh
+
+  # Requests & responses
+
+  schemas:
+
+    StatusResponse:
+      required:
+        - status
+      properties:
+        status:
+          type: integer
+          example: 200
+        error:
+          type: string
+
+    FilmLinkRequest:
+      required:
+        - film_link
+      properties:
+        film_link:
+          type: string
+
+    #Auth
+
+    SignupRequest:
+      required:
+        - email
+        - username
+        - password
+      properties:
+        email:
+          type: string
+          example: 'nagibator@yandex.ru'
+        username:
+          type: string
+          example: 'XXX_nagibator_XXX'
+        password:
+          type: string
+          example: 'root'
+
+    LoginRequest:
+      required:
+        - email
+        - password
+      properties:
+        email:
+          type: string
+          example: 'nagibator@yandex.ru'
+        password:
+          type: string
+          example: 'root'
+
+    # Films
+
+    NewFilmRequest:
+      required:
+        - title
+        - director
+        - preview_data
+        - duration
+        - release_date
+        - film_data
+      properties:
+        title:
+          type: string
+          example: 'Transformers'
+        director:
+          type: string
+          example: 'Transformers'
+        preview_data:
+          type: string
+        duration:
+          type: integer
+          example: 7560
+        release_date:
+          type: string
+          example: '2011-04-11T10:20:30'
+        film_data:
+          type: string
+
+    FilmsResponse:
+      required:
+        - status
+        - films
+      properties:
+        status:
+          type: integer
+          example: 200
+        films:
+          type: array
+          items:
+            type: object
+            required:
+              - type
+              - preview_data
+              - title
+              - director
+              - average_score
+              - scores_count
+              - duration
+            properties:
+              type:
+                type: string
+                example: 'serial'
+              preview_data:
+                type: string
+              title:
+                type: string
+                example: 'Transformers'
+              director:
+                type: string
+                example: 'Michael Bell'
+              average_score:
+                type: integer
+                example: 4
+                pattern: '[0-5]'
+              scores_count:
+                type: integer
+                example: 20324
+              duration:
+                type: integer
+                example: 7560
+
+    FilmResponse:
+      required:
+        - status
+        - film
+      properties:
+        status:
+          type: integer
+          example: 200
+        film:
+          type: object
+          required:
+            - type
+            - preview_data
+            - title
+            - director
+            - average_score
+            - scores_count
+            - duration
+            - release_date
+          properties:
+            type:
+              type: string
+              example: 'serial'
+            preview_data:
+              type: string
+            title:
+              type: string
+              example: 'Transformers'
+            director:
+              type: string
+              example: 'Michael Bell'
+            average_score:
+              type: integer
+              example: 4
+              pattern: '[0-5]'
+            scores_count:
+              type: integer
+              example: 20324
+            duration:
+              type: integer
+              example: 7560
+            release_date:
+              type: string
+              example: '2011-04-11T10:20:30'
+            film_data:
+              type: string
+            series:
+              type: array
+              items:
+                type: string
+
+    AllGenresResponse:
+      required:
+        - status
+        - genres
+      properties:
+        status:
+          type: integer
+          example: 200
+        genres:
+          type: array
+          items:
+            type: object
+            required:
+              - genre
+              - films
+            properties:
+              genre:
+                type: string
+                example: 'fantasy'
+              films:
+                type: array
+                items:
+                  type: object
+                  required:
+                    - preview_data
+                  properties:
+                    preview_data:
+                      type: string
+
+
+    GenreResponse:
+      required:
+        - status
+        - films
+      properties:
+        status:
+          type: integer
+          example: 200
+        films:
+          type: array
+          items:
+            type: object
+            required:
+              - type
+              - preview_data
+              - title
+              - director
+              - average_score
+              - scores_count
+              - duration
+            properties:
+              type:
+                type: string
+                example: 'serial'
+              preview_data:
+                type: string
+              title:
+                type: string
+                example: 'Transformers'
+              director:
+                type: string
+                example: 'Michael Bell'
+              average_score:
+                type: integer
+                example: 4
+                pattern: '[0-5]'
+              scores_count:
+                type: integer
+                example: 20324
+              duration:
+                type: integer
+                example: 7560
+
+    CommentsResponse:
+      required:
+        - status
+        - comments
+      properties:
+        status:
+          type: integer
+          example: 200
+        comments:
+          type: array
+          items:
+            type: object
+            required:
+              - score
+              - text
+              - author
+              - release_date
+            properties:
+              score:
+                type: integer
+                example: 4
+                pattern: '[0-5]'
+              text:
+                type: string
+                example: 'nice film!!!'
+              author:
+                type: string
+                example: 'Arnold Hendrikson'
+              release_date:
+                type: string
+                example: '2011-04-11T10:20:30'
+
+    NewCommentRequest:
+      required:
+        - film_uuid
+        - user_uuid
+        - comment_text
+        - score
+      properties:
+        film_uuid:
+          type: string
+          example: 'Transformers'
+        user_uuid:
+          type: string
+          example: 'Transformers'
+        comment_text:
+          type: string
+          example: 'Transformers'
+        score:
+          type: integer
+          example: 5
+
+    # Profile
+
+    ProfileResponse:
+      required:
+        - status
+        - profile
+      properties:
+        status:
+          type: integer
+          example: 200
+        profile:
+          required:
+            - name
+            - email
+            - signup_at
+            - is_admin
+            - avatar
+          properties:
+            name:
+              type: string
+              example: 'Ahmed'
+            email:
+              type: string
+              example: 'ahmed@yandex.ru'
+            signup_at:
+              type: string
+              example: '2011-04-11T10:20:30'
+            is_admin:
+              type: boolean
+              example: false
+            avatar:
+              type: string
+
+    ProfilePreviewResponse:
+      required:
+        - status
+        - profile
+      properties:
+        status:
+          type: integer
+          example: 200
+        profile:
+          required:
+            - name
+            - avatar
+          properties:
+            name:
+              type: string
+              example: 'Ahmed'
+            avatar:
+              type: string
+
+    ProfileEditRequest:
+      required:
+        - action
+      properties:
+        action:
+          type: string
+          example: 'chUsername'
+          pattern: '[chPassword | chUsername | chAvatar]'
+        newData:
+          type: string
+          example: 'new_username'
+        avatar:
+          type: string
+
+    # Actors
+
+    NewActorRequest:
+      required:
+        - name
+        - avatar
+        - birthday
+        - career
+        - height
+        - birth_place
+        - genres
+        - spouse
+      properties:
+        name:
+          type: string
+          example: 'Evgenij Gennadjevich'
+        avatar:
+          type: string
+        birthday:
+          type: string
+          example: '2011-04-11T10:20:30'
+        career:
+          type: string
+        height:
+          type: integer
+          example: 135
+        birth_place:
+          type: string
+          example: 'New Jersey'
+        genres:
+          type: string
+        spouse:
+          type: string
+
+    ActorsResponse:
+      required:
+        - status
+        - actors
+      properties:
+        status:
+          type: integer
+          example: 200
+        actors:
+          type: array
+          items:
+            type: object
+            required:
+              - name
+              - avatar
+            properties:
+              name:
+                type: string
+                example: 'Evgenij Gennadjevich'
+              avatar:
+                type: string
+
+    ActorResponse:
+      required:
+        - status
+        - actor
+      properties:
+        status:
+          type: integer
+          example: 200
+        actor:
+          type: object
+          required:
+            - uuid
+            - name
+            - avatar
+            - birthday
+            - career
+            - height
+            - birth_place
+            - genres
+            - spouse
+            - films
+          properties:
+            uuid:
+              type: string
+              example: 'frfdF48AfJ1MAFfKF13KFAOS'
+            name:
+              type: string
+              example: 'Evgenij Gennadjevich'
+            avatar:
+              type: string
+            birthday:
+              type: string
+              example: '2011-04-11T10:20:30'
+            career:
+              type: string
+            height:
+              type: integer
+              example: 135
+            birth_place:
+              type: string
+              example: 'New Jersey'
+            genres:
+              type: string
+            spouse:
+              type: string
+            films:
+              type: array
+              items:
+                type: object
+                required:
+                  - uuid
+                  - title
+                  - data
+                properties:
+                  uuid:
+                    type: string
+                    example: 'frfdF48AfJ1MAFfKF13KFAOS'
+                  title:
+                    type: string
+                    example: 'Fast & Furious'
+                  data:
+                    type: string
