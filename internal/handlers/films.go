@@ -641,7 +641,16 @@ func (filmsPageHandlers *FilmsPageHandlers) LongSearch(w http.ResponseWriter, r 
 			Count:  int(films.Count),
 		}
 
-		err = WriteResponse(w, r, filmsPageHandlers.metrics, response, requestID)
+		jsonResponse, err := easyjson.Marshal(response)
+		if err != nil {
+			err = WriteError(w, r, filmsPageHandlers.metrics, err)
+			if err != nil {
+				filmsPageHandlers.logger.Errorf("[reqid=%s] failed to marshal response: %v\n", requestID, err)
+			}
+			return
+		}
+
+		err = WriteResponse(w, r, filmsPageHandlers.metrics, jsonResponse, requestID)
 		if err != nil {
 			err = WriteError(w, r, filmsPageHandlers.metrics, err)
 			if err != nil {
