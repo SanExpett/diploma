@@ -9,8 +9,9 @@ import (
 	http "net/http"
 	reflect "reflect"
 
+	domain "github.com/SanExpett/diploma/internal/domain"
 	jwt "github.com/dgrijalva/jwt-go"
-	domain "github.com/go-park-mail-ru/2024_1_Netrunners/internal/domain"
+	gom
 	gomock "github.com/golang/mock/gomock"
 )
 

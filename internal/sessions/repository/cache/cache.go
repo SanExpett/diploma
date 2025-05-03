@@ -5,7 +5,7 @@ import (
 
 	"github.com/patrickmn/go-cache"
 
-	myerrors "github.com/go-park-mail-ru/2024_1_Netrunners/internal/errors"
+	myerrors "github.com/SanExpett/diploma/internal/errors"
 )
 
 var (

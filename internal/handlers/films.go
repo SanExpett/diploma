@@ -10,11 +10,11 @@ import (
 	"github.com/mailru/easyjson"
 	"go.uber.org/zap"
 
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/domain"
-	myerrors "github.com/go-park-mail-ru/2024_1_Netrunners/internal/errors"
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/metrics"
-	reqid "github.com/go-park-mail-ru/2024_1_Netrunners/internal/requestId"
-	session "github.com/go-park-mail-ru/2024_1_Netrunners/internal/session/proto"
+	"github.com/SanExpett/diploma/internal/domain"
+	myerrors "github.com/SanExpett/diploma/internal/errors"
+	"github.com/SanExpett/diploma/internal/metrics"
+	reqid "github.com/SanExpett/diploma/internal/requestId"
+	session "github.com/SanExpett/diploma/internal/session/proto"
 )
 
 type FilmsPageHandlers struct {

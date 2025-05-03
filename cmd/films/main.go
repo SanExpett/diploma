@@ -17,12 +17,12 @@ import (
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
 
-	helper "github.com/go-park-mail-ru/2024_1_Netrunners/cmd"
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/films/api"
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/films/repository"
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/films/service"
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/metrics"
-	session "github.com/go-park-mail-ru/2024_1_Netrunners/internal/session/proto"
+	helper "github.com/SanExpett/diploma/cmd"
+	"github.com/SanExpett/diploma/internal/films/api"
+	"github.com/SanExpett/diploma/internal/films/repository"
+	"github.com/SanExpett/diploma/internal/films/service"
+	"github.com/SanExpett/diploma/internal/metrics"
+	session "github.com/SanExpett/diploma/internal/session/proto"
 )
 
 func main() {

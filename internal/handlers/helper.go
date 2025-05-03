@@ -18,10 +18,10 @@ import (
 	"github.com/gorilla/mux"
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/domain"
-	myerrors "github.com/go-park-mail-ru/2024_1_Netrunners/internal/errors"
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/metrics"
-	session "github.com/go-park-mail-ru/2024_1_Netrunners/internal/session/proto"
+	"github.com/SanExpett/diploma/internal/domain"
+	myerrors "github.com/SanExpett/diploma/internal/errors"
+	"github.com/SanExpett/diploma/internal/metrics"
+	session "github.com/SanExpett/diploma/internal/session/proto"
 )
 
 type SuccessResponse struct {

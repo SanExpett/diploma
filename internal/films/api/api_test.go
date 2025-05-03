@@ -9,9 +9,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/domain"
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/films/mocks"
-	session "github.com/go-park-mail-ru/2024_1_Netrunners/internal/session/proto"
+	"github.com/SanExpett/diploma/internal/domain"
+	"github.com/SanExpett/diploma/internal/films/mocks"
+	session "github.com/SanExpett/diploma/internal/session/proto"
 )
 
 func TestFilmsServer_GetAllFilmsPreviews(t *testing.T) {

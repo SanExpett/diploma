@@ -8,9 +8,9 @@ import (
 	"go.uber.org/zap"
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/domain"
-	reqid "github.com/go-park-mail-ru/2024_1_Netrunners/internal/requestId"
-	session "github.com/go-park-mail-ru/2024_1_Netrunners/internal/session/proto"
+	"github.com/SanExpett/diploma/internal/domain"
+	reqid "github.com/SanExpett/diploma/internal/requestId"
+	session "github.com/SanExpett/diploma/internal/session/proto"
 )
 
 type FilmsService interface {

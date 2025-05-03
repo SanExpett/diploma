@@ -8,7 +8,7 @@ import (
 	context "context"
 	reflect "reflect"
 
-	session "github.com/go-park-mail-ru/2024_1_Netrunners/internal/session/proto"
+	session "github.com/SanExpett/diploma/internal/session/proto"
 	gomock "github.com/golang/mock/gomock"
 	grpc "google.golang.org/grpc"
 )

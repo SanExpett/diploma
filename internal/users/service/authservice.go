@@ -13,9 +13,9 @@ import (
 	guuid "github.com/google/uuid"
 	"go.uber.org/zap"
 
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/domain"
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/metrics"
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/requestId"
+	"github.com/SanExpett/diploma/internal/domain"
+	"github.com/SanExpett/diploma/internal/metrics"
+	"github.com/SanExpett/diploma/internal/requestId"
 )
 
 type usersStorage interface {

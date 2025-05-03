@@ -3,7 +3,7 @@ package mocks
 import (
 	"time"
 
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/domain"
+	"github.com/SanExpett/diploma/internal/domain"
 )
 
 func NewMockActor() domain.ActorData {

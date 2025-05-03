@@ -1,4 +1,4 @@
-module github.com/go-park-mail-ru/2024_1_Netrunners
+module github.com/SanExpett/diploma
 
 go 1.21
 

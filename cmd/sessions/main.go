@@ -13,11 +13,11 @@ import (
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
 
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/metrics"
-	session "github.com/go-park-mail-ru/2024_1_Netrunners/internal/session/proto"
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/sessions/api"
-	mycache "github.com/go-park-mail-ru/2024_1_Netrunners/internal/sessions/repository/cache"
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/sessions/service"
+	"github.com/SanExpett/diploma/internal/metrics"
+	session "github.com/SanExpett/diploma/internal/session/proto"
+	"github.com/SanExpett/diploma/internal/sessions/api"
+	mycache "github.com/SanExpett/diploma/internal/sessions/repository/cache"
+	"github.com/SanExpett/diploma/internal/sessions/service"
 	"github.com/gorilla/mux"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )

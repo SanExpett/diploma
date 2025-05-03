@@ -17,10 +17,10 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/handlers"
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/metrics"
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/middleware"
-	session "github.com/go-park-mail-ru/2024_1_Netrunners/internal/session/proto"
+	"github.com/SanExpett/diploma/internal/handlers"
+	"github.com/SanExpett/diploma/internal/metrics"
+	"github.com/SanExpett/diploma/internal/middleware"
+	session "github.com/SanExpett/diploma/internal/session/proto"
 )
 
 func main() {

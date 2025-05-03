@@ -7,8 +7,8 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/metrics"
-	mockService "github.com/go-park-mail-ru/2024_1_Netrunners/internal/sessions/mock"
+	"github.com/SanExpett/diploma/internal/metrics"
+	mockService "github.com/SanExpett/diploma/internal/sessions/mock"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 )

@@ -10,9 +10,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"go.uber.org/zap/zaptest"
 
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/domain"
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/metrics"
-	mockService "github.com/go-park-mail-ru/2024_1_Netrunners/internal/users/mocks"
+	"github.com/SanExpett/diploma/internal/domain"
+	"github.com/SanExpett/diploma/internal/metrics"
+	mockService "github.com/SanExpett/diploma/internal/users/mocks"
 )
 
 func TestAuthService_HasUser(t *testing.T) {

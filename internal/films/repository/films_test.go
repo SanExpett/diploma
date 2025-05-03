@@ -6,7 +6,7 @@ import (
 	"github.com/pashagolub/pgxmock/v3"
 	"github.com/stretchr/testify/require"
 
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/films/mocks"
+	"github.com/SanExpett/diploma/internal/films/mocks"
 )
 
 func TestFilmsStorage_GetFilmDataByUuid(t *testing.T) {

@@ -5,10 +5,10 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/domain"
-	myerrors "github.com/go-park-mail-ru/2024_1_Netrunners/internal/errors"
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/metrics"
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/requestId"
+	"github.com/SanExpett/diploma/internal/domain"
+	myerrors "github.com/SanExpett/diploma/internal/errors"
+	"github.com/SanExpett/diploma/internal/metrics"
+	"github.com/SanExpett/diploma/internal/requestId"
 )
 
 type FilmsStorage interface {

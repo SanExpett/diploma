@@ -7,10 +7,10 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/domain"
-	session "github.com/go-park-mail-ru/2024_1_Netrunners/internal/session/proto"
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/users/api"
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/users/mocks"
+	"github.com/SanExpett/diploma/internal/domain"
+	session "github.com/SanExpett/diploma/internal/session/proto"
+	"github.com/SanExpett/diploma/internal/users/api"
+	"github.com/SanExpett/diploma/internal/users/mocks"
 )
 
 func TestUsersServer_CreateUser(t *testing.T) {

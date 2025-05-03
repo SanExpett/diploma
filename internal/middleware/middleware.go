@@ -8,10 +8,10 @@ import (
 
 	"go.uber.org/zap"
 
-	myerrors "github.com/go-park-mail-ru/2024_1_Netrunners/internal/errors"
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/handlers"
-	"github.com/go-park-mail-ru/2024_1_Netrunners/internal/metrics"
-	reqid "github.com/go-park-mail-ru/2024_1_Netrunners/internal/requestId"
+	myerrors "github.com/SanExpett/diploma/internal/errors"
+	"github.com/SanExpett/diploma/internal/handlers"
+	"github.com/SanExpett/diploma/internal/metrics"
+	reqid "github.com/SanExpett/diploma/internal/requestId"
 	"github.com/gorilla/mux"
 )
 

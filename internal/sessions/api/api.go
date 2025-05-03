@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"go.uber.org/zap"
 
-	reqid "github.com/go-park-mail-ru/2024_1_Netrunners/internal/requestId"
-	session "github.com/go-park-mail-ru/2024_1_Netrunners/internal/session/proto"
+	reqid "github.com/SanExpett/diploma/internal/requestId"
+	session "github.com/SanExpett/diploma/internal/session/proto"
 )
 
 type SessionService interface {
