@@ -27,7 +27,7 @@ services:
       - ./db/migrations:/migrations
     command:
       - -path=/migrations
-      - -database=postgres://postgres:postgres@postgres:5432/netrunners?sslmode=disable
+      - -database=postgres://postgres:postgres@postgres:5432/nimbus?sslmode=disable
       - up
     depends_on:
       postgres:

@@ -54,7 +54,7 @@ func main() {
 		"5432",
 		"postgres",
 		"root1234",
-		"netrunnerflix",
+		"nimbus",
 	))
 	if err != nil {
 		log.Fatal(err)

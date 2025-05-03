@@ -1,4 +1,4 @@
-CREATE DATABASE netrunnerflix;
+CREATE DATABASE nimbus;
 
 CREATE TABLE IF NOT EXISTS users
 (

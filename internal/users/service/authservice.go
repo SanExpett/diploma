@@ -215,7 +215,7 @@ func (service *UsersService) PaySubscription(ctx context.Context, uuid, subId st
         },
         "confirmation": {
           "type": "redirect",
-          "return_url": "https://netrunnerflix.ru/"
+          "return_url": "https://nimbus.ru/"
         },
         "description": "Подписка %s"
       }`, sub.Amount, uuid)))

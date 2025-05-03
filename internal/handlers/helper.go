@@ -544,7 +544,7 @@ func GenerateTokens(login string, isAdmin bool, version uint32) (tokenSigned str
 	tokenCustomClaims := customClaims{
 		StandardClaims: jwt.StandardClaims{
 			ExpiresAt: time.Now().Add(time.Hour * 48).Unix(),
-			Issuer:    "NETrunnerFLIX",
+			Issuer:    "nimbus",
 		},
 		Login:   login,
 		IsAdmin: isAdmin,

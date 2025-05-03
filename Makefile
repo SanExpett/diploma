@@ -12,7 +12,7 @@ USERS_PORT    := 8030
 # Переменные для PostgreSQL
 POSTGRES_USER     := postgres
 POSTGRES_PASSWORD := postgres
-POSTGRES_DB       := netrunners
+POSTGRES_DB       := nimbus
 POSTGRES_PORT     := 5432
 POSTGRES_HOST     := localhost
 MIGRATION_PATH    := ./db/migrations
