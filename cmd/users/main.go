@@ -72,6 +72,7 @@ func main() {
 		router := mux.NewRouter()
 
 		router.Handle("/metrics", promhttp.Handler())
+
 		metricsServer := &http.Server{
 			Handler: router,
 			Addr:    fmt.Sprintf(":%d", backEndPort+1),

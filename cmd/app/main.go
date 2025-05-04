@@ -17,12 +17,32 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 
+	_ "github.com/SanExpett/diploma/docs/app"
 	"github.com/SanExpett/diploma/internal/handlers"
 	"github.com/SanExpett/diploma/internal/metrics"
 	"github.com/SanExpett/diploma/internal/middleware"
 	session "github.com/SanExpett/diploma/internal/session/proto"
+	httpSwagger "github.com/swaggo/http-swagger"
 )
 
+// @title           Nimbus API Gateway
+// @version         1.0
+// @description     API Gateway для сервиса стриминга Nimbus
+// @termsOfService  http://swagger.io/terms/
+
+// @contact.name   API Support
+// @contact.url    http://www.nimbus.io/support
+// @contact.email  support@nimbus.io
+
+// @license.name  Apache 2.0
+// @license.url   http://www.apache.org/licenses/LICENSE-2.0.html
+
+// @host      localhost:8081
+// @BasePath  /api
+
+// @securityDefinitions.apikey ApiKeyAuth
+// @in header
+// @name Authorization
 func main() {
 	var (
 		frontEndPort int
@@ -72,6 +92,14 @@ func main() {
 	router := mux.NewRouter()
 
 	router.Handle("/metrics", promhttp.Handler())
+
+	// Swagger endpoint
+	router.PathPrefix("/swagger/").Handler(httpSwagger.Handler(
+		httpSwagger.URL("/swagger/doc.json"),
+		httpSwagger.DeepLinking(true),
+		httpSwagger.DocExpansion("none"),
+		httpSwagger.DomID("swagger-ui"),
+	))
 
 	router.HandleFunc("/api/auth/login", authPageHandlers.Login).Methods("POST", "OPTIONS")
 	router.HandleFunc("/api/auth/logout", authPageHandlers.Logout).Methods("POST", "OPTIONS")

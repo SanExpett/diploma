@@ -65,6 +65,17 @@ func NewAuthPageHandlers(usersClient *session.UsersClient, sessionsClient *sessi
 	}
 }
 
+// @Summary      Вход в систему
+// @Description  Авторизует пользователя и выдает токен доступа
+// @Tags         Auth
+// @Accept       json
+// @Produce      json
+// @Param        credentials  body      domain.UserSignUp  true  "Логин и пароль пользователя"
+// @Success      200          {object}  object             "Успешная авторизация"
+// @Failure      400          {object}  object             "Ошибка валидации"
+// @Failure      401          {object}  object             "Ошибка авторизации"
+// @Failure      500          {object}  object             "Внутренняя ошибка сервера"
+// @Router       /auth/login [post]
 func (authPageHandlers *AuthPageHandlers) Login(w http.ResponseWriter, r *http.Request) {
 	var inputUserData domain.UserSignUp
 	ctx := r.Context()
@@ -183,6 +194,15 @@ func (authPageHandlers *AuthPageHandlers) Login(w http.ResponseWriter, r *http.R
 	authPageHandlers.logger.Info(fmt.Sprintf("[reqid=%s] success login", requestID))
 }
 
+// @Summary      Выход из системы
+// @Description  Удаляет текущую сессию пользователя
+// @Tags         Auth
+// @Accept       json
+// @Produce      json
+// @Success      200  {object}  object  "Успешный выход"
+// @Failure      401  {object}  object  "Ошибка авторизации"
+// @Failure      500  {object}  object  "Внутренняя ошибка сервера"
+// @Router       /auth/logout [post]
 func (authPageHandlers *AuthPageHandlers) Logout(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
 	requestID := ctx.Value(reqid.ReqIDKey)

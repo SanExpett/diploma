@@ -1,0 +1,88 @@
+basePath: /api
+definitions:
+  github_com_SanExpett_diploma_internal_domain.UserSignUp:
+    properties:
+      login:
+        type: string
+      password:
+        type: string
+      username:
+        type: string
+    type: object
+host: localhost:8081
+info:
+  contact:
+    email: support@nimbus.io
+    name: API Support
+    url: http://www.nimbus.io/support
+  description: API Gateway для сервиса стриминга Nimbus
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Nimbus API Gateway
+  version: "1.0"
+paths:
+  /auth/login:
+    post:
+      consumes:
+      - application/json
+      description: Авторизует пользователя и выдает токен доступа
+      parameters:
+      - description: Логин и пароль пользователя
+        in: body
+        name: credentials
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_SanExpett_diploma_internal_domain.UserSignUp'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Успешная авторизация
+          schema:
+            type: object
+        "400":
+          description: Ошибка валидации
+          schema:
+            type: object
+        "401":
+          description: Ошибка авторизации
+          schema:
+            type: object
+        "500":
+          description: Внутренняя ошибка сервера
+          schema:
+            type: object
+      summary: Вход в систему
+      tags:
+      - Auth
+  /auth/logout:
+    post:
+      consumes:
+      - application/json
+      description: Удаляет текущую сессию пользователя
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Успешный выход
+          schema:
+            type: object
+        "401":
+          description: Ошибка авторизации
+          schema:
+            type: object
+        "500":
+          description: Внутренняя ошибка сервера
+          schema:
+            type: object
+      summary: Выход из системы
+      tags:
+      - Auth
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

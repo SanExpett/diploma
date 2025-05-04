@@ -114,6 +114,12 @@ proto:
 		--go-grpc_out=. --go-grpc_opt=paths=source_relative \
 		./*.proto
 
+# Swagger документация
+swagger:
+	@echo "${GREEN}Генерация документации Swagger для API Gateway...${RESET}"
+	@mkdir -p docs/app
+	@swag init -g cmd/app/main.go --parseDependency --output docs/app
+
 # Разработка
 lint:
 	@echo "${GREEN}Запуск линтера...${RESET}"
@@ -171,6 +177,7 @@ help:
 	@echo "make run         - Локальный запуск всех сервисов"
 	@echo "make stop        - Остановка локальных сервисов"
 	@echo "make proto       - Генерация proto файлов"
+	@echo "make swagger     - Генерация Swagger для API Gateway"
 	@echo "make lint        - Запуск линтера"
 	@echo "make test        - Запуск тестов"
 	@echo "make status      - Проверка статуса всех компонентов"

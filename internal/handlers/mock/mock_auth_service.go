@@ -11,7 +11,6 @@ import (
 
 	domain "github.com/SanExpett/diploma/internal/domain"
 	jwt "github.com/dgrijalva/jwt-go"
-	gom
 	gomock "github.com/golang/mock/gomock"
 )
 
