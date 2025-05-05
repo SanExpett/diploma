@@ -17,7 +17,7 @@ var (
 	_ easyjson.Marshaler
 )
 
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain(in *jlexer.Lexer, out *UserSignUp) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain(in *jlexer.Lexer, out *UserSignUp) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -52,7 +52,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain(in
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain(out *jwriter.Writer, in UserSignUp) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain(out *jwriter.Writer, in UserSignUp) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -77,27 +77,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain(ou
 // MarshalJSON supports json.Marshaler interface
 func (v UserSignUp) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v UserSignUp) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *UserSignUp) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *UserSignUp) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain1(in *jlexer.Lexer, out *UserPreview) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain1(in *jlexer.Lexer, out *UserPreview) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -132,7 +132,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain1(i
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain1(out *jwriter.Writer, in UserPreview) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain1(out *jwriter.Writer, in UserPreview) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -157,27 +157,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain1(o
 // MarshalJSON supports json.Marshaler interface
 func (v UserPreview) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain1(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain1(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v UserPreview) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain1(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain1(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *UserPreview) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain1(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain1(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *UserPreview) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain1(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain1(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain2(in *jlexer.Lexer, out *User) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain2(in *jlexer.Lexer, out *User) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -230,7 +230,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain2(i
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain2(out *jwriter.Writer, in User) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain2(out *jwriter.Writer, in User) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -290,27 +290,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain2(o
 // MarshalJSON supports json.Marshaler interface
 func (v User) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain2(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain2(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v User) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain2(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain2(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *User) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain2(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain2(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *User) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain2(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain2(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain3(in *jlexer.Lexer, out *TopFilmsResponse) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain3(in *jlexer.Lexer, out *TopFilmsResponse) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -364,7 +364,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain3(i
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain3(out *jwriter.Writer, in TopFilmsResponse) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain3(out *jwriter.Writer, in TopFilmsResponse) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -395,27 +395,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain3(o
 // MarshalJSON supports json.Marshaler interface
 func (v TopFilmsResponse) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain3(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain3(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v TopFilmsResponse) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain3(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain3(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *TopFilmsResponse) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain3(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain3(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *TopFilmsResponse) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain3(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain3(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain4(in *jlexer.Lexer, out *TopFilm) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain4(in *jlexer.Lexer, out *TopFilm) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -454,7 +454,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain4(i
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain4(out *jwriter.Writer, in TopFilm) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain4(out *jwriter.Writer, in TopFilm) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -489,27 +489,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain4(o
 // MarshalJSON supports json.Marshaler interface
 func (v TopFilm) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain4(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain4(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v TopFilm) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain4(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain4(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *TopFilm) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain4(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain4(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *TopFilm) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain4(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain4(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain5(in *jlexer.Lexer, out *SubsctiptionsResponse) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain5(in *jlexer.Lexer, out *SubsctiptionsResponse) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -563,7 +563,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain5(i
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain5(out *jwriter.Writer, in SubsctiptionsResponse) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain5(out *jwriter.Writer, in SubsctiptionsResponse) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -594,27 +594,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain5(o
 // MarshalJSON supports json.Marshaler interface
 func (v SubsctiptionsResponse) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain5(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain5(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v SubsctiptionsResponse) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain5(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain5(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *SubsctiptionsResponse) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain5(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain5(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *SubsctiptionsResponse) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain5(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain5(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain6(in *jlexer.Lexer, out *Subscription) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain6(in *jlexer.Lexer, out *Subscription) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -653,7 +653,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain6(i
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain6(out *jwriter.Writer, in Subscription) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain6(out *jwriter.Writer, in Subscription) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -688,27 +688,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain6(o
 // MarshalJSON supports json.Marshaler interface
 func (v Subscription) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain6(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain6(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v Subscription) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain6(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain6(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *Subscription) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain6(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain6(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *Subscription) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain6(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain6(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain7(in *jlexer.Lexer, out *ShortSearchResponse) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain7(in *jlexer.Lexer, out *ShortSearchResponse) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -785,7 +785,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain7(i
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain7(out *jwriter.Writer, in ShortSearchResponse) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain7(out *jwriter.Writer, in ShortSearchResponse) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -832,27 +832,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain7(o
 // MarshalJSON supports json.Marshaler interface
 func (v ShortSearchResponse) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain7(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain7(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v ShortSearchResponse) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain7(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain7(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *ShortSearchResponse) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain7(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain7(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *ShortSearchResponse) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain7(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain7(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain8(in *jlexer.Lexer, out *SerialData) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain8(in *jlexer.Lexer, out *SerialData) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -953,7 +953,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain8(i
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain8(out *jwriter.Writer, in SerialData) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain8(out *jwriter.Writer, in SerialData) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -1055,27 +1055,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain8(o
 // MarshalJSON supports json.Marshaler interface
 func (v SerialData) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain8(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain8(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v SerialData) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain8(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain8(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *SerialData) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain8(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain8(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *SerialData) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain8(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain8(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain9(in *jlexer.Lexer, out *Season) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain9(in *jlexer.Lexer, out *Season) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -1127,7 +1127,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain9(i
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain9(out *jwriter.Writer, in Season) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain9(out *jwriter.Writer, in Season) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -1153,27 +1153,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain9(o
 // MarshalJSON supports json.Marshaler interface
 func (v Season) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain9(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain9(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v Season) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain9(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain9(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *Season) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain9(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain9(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *Season) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain9(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain9(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain10(in *jlexer.Lexer, out *SearchFilms) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain10(in *jlexer.Lexer, out *SearchFilms) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -1227,7 +1227,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain10(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain10(out *jwriter.Writer, in SearchFilms) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain10(out *jwriter.Writer, in SearchFilms) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -1258,27 +1258,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain10(
 // MarshalJSON supports json.Marshaler interface
 func (v SearchFilms) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain10(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain10(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v SearchFilms) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain10(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain10(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *SearchFilms) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain10(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain10(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *SearchFilms) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain10(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain10(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain11(in *jlexer.Lexer, out *SearchActors) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain11(in *jlexer.Lexer, out *SearchActors) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -1332,7 +1332,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain11(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain11(out *jwriter.Writer, in SearchActors) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain11(out *jwriter.Writer, in SearchActors) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -1363,27 +1363,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain11(
 // MarshalJSON supports json.Marshaler interface
 func (v SearchActors) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain11(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain11(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v SearchActors) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain11(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain11(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *SearchActors) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain11(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain11(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *SearchActors) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain11(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain11(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain12(in *jlexer.Lexer, out *ProfileResponse) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain12(in *jlexer.Lexer, out *ProfileResponse) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -1416,7 +1416,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain12(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain12(out *jwriter.Writer, in ProfileResponse) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain12(out *jwriter.Writer, in ProfileResponse) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -1436,27 +1436,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain12(
 // MarshalJSON supports json.Marshaler interface
 func (v ProfileResponse) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain12(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain12(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v ProfileResponse) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain12(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain12(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *ProfileResponse) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain12(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain12(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *ProfileResponse) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain12(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain12(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain13(in *jlexer.Lexer, out *ProfilePreviewResponse) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain13(in *jlexer.Lexer, out *ProfilePreviewResponse) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -1489,7 +1489,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain13(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain13(out *jwriter.Writer, in ProfilePreviewResponse) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain13(out *jwriter.Writer, in ProfilePreviewResponse) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -1509,27 +1509,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain13(
 // MarshalJSON supports json.Marshaler interface
 func (v ProfilePreviewResponse) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain13(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain13(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v ProfilePreviewResponse) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain13(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain13(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *ProfilePreviewResponse) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain13(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain13(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *ProfilePreviewResponse) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain13(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain13(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain14(in *jlexer.Lexer, out *PayResponse) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain14(in *jlexer.Lexer, out *PayResponse) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -1560,7 +1560,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain14(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain14(out *jwriter.Writer, in PayResponse) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain14(out *jwriter.Writer, in PayResponse) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -1575,27 +1575,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain14(
 // MarshalJSON supports json.Marshaler interface
 func (v PayResponse) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain14(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain14(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v PayResponse) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain14(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain14(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *PayResponse) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain14(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain14(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *PayResponse) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain14(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain14(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain15(in *jlexer.Lexer, out *LongSearchResponse) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain15(in *jlexer.Lexer, out *LongSearchResponse) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -1674,7 +1674,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain15(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain15(out *jwriter.Writer, in LongSearchResponse) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain15(out *jwriter.Writer, in LongSearchResponse) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -1726,27 +1726,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain15(
 // MarshalJSON supports json.Marshaler interface
 func (v LongSearchResponse) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain15(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain15(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v LongSearchResponse) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain15(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain15(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *LongSearchResponse) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain15(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain15(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *LongSearchResponse) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain15(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain15(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain16(in *jlexer.Lexer, out *HasSubsctiptionsResponse) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain16(in *jlexer.Lexer, out *HasSubsctiptionsResponse) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -1779,7 +1779,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain16(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain16(out *jwriter.Writer, in HasSubsctiptionsResponse) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain16(out *jwriter.Writer, in HasSubsctiptionsResponse) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -1799,27 +1799,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain16(
 // MarshalJSON supports json.Marshaler interface
 func (v HasSubsctiptionsResponse) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain16(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain16(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v HasSubsctiptionsResponse) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain16(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain16(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *HasSubsctiptionsResponse) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain16(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain16(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *HasSubsctiptionsResponse) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain16(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain16(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain17(in *jlexer.Lexer, out *GenresResponse) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain17(in *jlexer.Lexer, out *GenresResponse) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -1873,7 +1873,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain17(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain17(out *jwriter.Writer, in GenresResponse) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain17(out *jwriter.Writer, in GenresResponse) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -1904,27 +1904,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain17(
 // MarshalJSON supports json.Marshaler interface
 func (v GenresResponse) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain17(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain17(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v GenresResponse) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain17(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain17(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *GenresResponse) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain17(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain17(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *GenresResponse) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain17(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain17(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain18(in *jlexer.Lexer, out *GenreFilms) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain18(in *jlexer.Lexer, out *GenreFilms) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -1980,7 +1980,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain18(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain18(out *jwriter.Writer, in GenreFilms) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain18(out *jwriter.Writer, in GenreFilms) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -2016,27 +2016,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain18(
 // MarshalJSON supports json.Marshaler interface
 func (v GenreFilms) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain18(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain18(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v GenreFilms) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain18(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain18(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *GenreFilms) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain18(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain18(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *GenreFilms) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain18(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain18(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain19(in *jlexer.Lexer, out *Genre) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain19(in *jlexer.Lexer, out *Genre) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -2069,7 +2069,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain19(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain19(out *jwriter.Writer, in Genre) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain19(out *jwriter.Writer, in Genre) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -2089,27 +2089,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain19(
 // MarshalJSON supports json.Marshaler interface
 func (v Genre) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain19(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain19(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v Genre) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain19(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain19(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *Genre) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain19(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain19(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *Genre) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain19(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain19(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain20(in *jlexer.Lexer, out *FilmsPreviewsResponse) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain20(in *jlexer.Lexer, out *FilmsPreviewsResponse) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -2163,7 +2163,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain20(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain20(out *jwriter.Writer, in FilmsPreviewsResponse) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain20(out *jwriter.Writer, in FilmsPreviewsResponse) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -2194,27 +2194,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain20(
 // MarshalJSON supports json.Marshaler interface
 func (v FilmsPreviewsResponse) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain20(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain20(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v FilmsPreviewsResponse) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain20(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain20(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *FilmsPreviewsResponse) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain20(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain20(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *FilmsPreviewsResponse) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain20(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain20(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain21(in *jlexer.Lexer, out *FilmToAdd) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain21(in *jlexer.Lexer, out *FilmToAdd) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -2270,7 +2270,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain21(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain21(out *jwriter.Writer, in FilmToAdd) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain21(out *jwriter.Writer, in FilmToAdd) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -2306,27 +2306,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain21(
 // MarshalJSON supports json.Marshaler interface
 func (v FilmToAdd) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain21(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain21(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v FilmToAdd) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain21(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain21(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *FilmToAdd) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain21(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain21(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *FilmToAdd) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain21(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain21(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain22(in *jlexer.Lexer, out *FilmPreview) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain22(in *jlexer.Lexer, out *FilmPreview) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -2373,7 +2373,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain22(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain22(out *jwriter.Writer, in FilmPreview) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain22(out *jwriter.Writer, in FilmPreview) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -2428,27 +2428,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain22(
 // MarshalJSON supports json.Marshaler interface
 func (v FilmPreview) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain22(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain22(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v FilmPreview) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain22(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain22(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *FilmPreview) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain22(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain22(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *FilmPreview) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain22(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain22(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain23(in *jlexer.Lexer, out *FilmDataToAdd) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain23(in *jlexer.Lexer, out *FilmDataToAdd) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -2543,7 +2543,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain23(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain23(out *jwriter.Writer, in FilmDataToAdd) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain23(out *jwriter.Writer, in FilmDataToAdd) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -2628,27 +2628,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain23(
 // MarshalJSON supports json.Marshaler interface
 func (v FilmDataToAdd) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain23(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain23(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v FilmDataToAdd) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain23(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain23(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *FilmDataToAdd) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain23(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain23(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *FilmDataToAdd) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain23(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain23(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain24(in *jlexer.Lexer, out *FilmDataResponse) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain24(in *jlexer.Lexer, out *FilmDataResponse) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -2687,7 +2687,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain24(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain24(out *jwriter.Writer, in FilmDataResponse) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain24(out *jwriter.Writer, in FilmDataResponse) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -2713,27 +2713,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain24(
 // MarshalJSON supports json.Marshaler interface
 func (v FilmDataResponse) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain24(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain24(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v FilmDataResponse) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain24(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain24(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *FilmDataResponse) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain24(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain24(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *FilmDataResponse) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain24(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain24(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain25(in *jlexer.Lexer, out *FilmData) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain25(in *jlexer.Lexer, out *FilmData) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -2813,7 +2813,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain25(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain25(out *jwriter.Writer, in FilmData) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain25(out *jwriter.Writer, in FilmData) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -2904,27 +2904,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain25(
 // MarshalJSON supports json.Marshaler interface
 func (v FilmData) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain25(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain25(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v FilmData) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain25(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain25(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *FilmData) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain25(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain25(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *FilmData) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain25(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain25(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain26(in *jlexer.Lexer, out *FilmCommentsResponse) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain26(in *jlexer.Lexer, out *FilmCommentsResponse) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -2978,7 +2978,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain26(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain26(out *jwriter.Writer, in FilmCommentsResponse) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain26(out *jwriter.Writer, in FilmCommentsResponse) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -3009,27 +3009,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain26(
 // MarshalJSON supports json.Marshaler interface
 func (v FilmCommentsResponse) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain26(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain26(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v FilmCommentsResponse) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain26(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain26(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *FilmCommentsResponse) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain26(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain26(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *FilmCommentsResponse) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain26(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain26(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain27(in *jlexer.Lexer, out *FilmActorsResponse) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain27(in *jlexer.Lexer, out *FilmActorsResponse) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -3083,7 +3083,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain27(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain27(out *jwriter.Writer, in FilmActorsResponse) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain27(out *jwriter.Writer, in FilmActorsResponse) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -3114,27 +3114,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain27(
 // MarshalJSON supports json.Marshaler interface
 func (v FilmActorsResponse) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain27(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain27(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v FilmActorsResponse) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain27(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain27(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *FilmActorsResponse) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain27(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain27(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *FilmActorsResponse) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain27(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain27(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain28(in *jlexer.Lexer, out *Episode) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain28(in *jlexer.Lexer, out *Episode) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -3167,7 +3167,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain28(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain28(out *jwriter.Writer, in Episode) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain28(out *jwriter.Writer, in Episode) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -3187,27 +3187,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain28(
 // MarshalJSON supports json.Marshaler interface
 func (v Episode) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain28(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain28(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v Episode) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain28(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain28(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *Episode) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain28(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain28(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *Episode) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain28(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain28(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain29(in *jlexer.Lexer, out *DirectorToAdd) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain29(in *jlexer.Lexer, out *DirectorToAdd) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -3244,7 +3244,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain29(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain29(out *jwriter.Writer, in DirectorToAdd) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain29(out *jwriter.Writer, in DirectorToAdd) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -3269,27 +3269,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain29(
 // MarshalJSON supports json.Marshaler interface
 func (v DirectorToAdd) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain29(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain29(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v DirectorToAdd) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain29(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain29(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *DirectorToAdd) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain29(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain29(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *DirectorToAdd) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain29(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain29(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain30(in *jlexer.Lexer, out *DataToFavorite) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain30(in *jlexer.Lexer, out *DataToFavorite) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -3322,7 +3322,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain30(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain30(out *jwriter.Writer, in DataToFavorite) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain30(out *jwriter.Writer, in DataToFavorite) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -3342,27 +3342,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain30(
 // MarshalJSON supports json.Marshaler interface
 func (v DataToFavorite) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain30(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain30(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v DataToFavorite) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain30(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain30(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *DataToFavorite) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain30(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain30(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *DataToFavorite) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain30(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain30(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain31(in *jlexer.Lexer, out *CommonFilmData) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain31(in *jlexer.Lexer, out *CommonFilmData) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -3465,7 +3465,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain31(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain31(out *jwriter.Writer, in CommonFilmData) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain31(out *jwriter.Writer, in CommonFilmData) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -3572,27 +3572,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain31(
 // MarshalJSON supports json.Marshaler interface
 func (v CommonFilmData) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain31(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain31(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v CommonFilmData) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain31(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain31(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *CommonFilmData) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain31(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain31(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *CommonFilmData) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain31(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain31(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain32(in *jlexer.Lexer, out *CommentToRemove) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain32(in *jlexer.Lexer, out *CommentToRemove) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -3625,7 +3625,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain32(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain32(out *jwriter.Writer, in CommentToRemove) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain32(out *jwriter.Writer, in CommentToRemove) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -3645,27 +3645,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain32(
 // MarshalJSON supports json.Marshaler interface
 func (v CommentToRemove) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain32(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain32(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v CommentToRemove) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain32(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain32(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *CommentToRemove) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain32(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain32(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *CommentToRemove) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain32(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain32(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain33(in *jlexer.Lexer, out *CommentToAdd) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain33(in *jlexer.Lexer, out *CommentToAdd) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -3702,7 +3702,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain33(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain33(out *jwriter.Writer, in CommentToAdd) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain33(out *jwriter.Writer, in CommentToAdd) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -3732,27 +3732,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain33(
 // MarshalJSON supports json.Marshaler interface
 func (v CommentToAdd) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain33(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain33(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v CommentToAdd) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain33(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain33(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *CommentToAdd) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain33(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain33(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *CommentToAdd) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain33(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain33(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain34(in *jlexer.Lexer, out *Comment) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain34(in *jlexer.Lexer, out *Comment) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -3797,7 +3797,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain34(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain34(out *jwriter.Writer, in Comment) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain34(out *jwriter.Writer, in Comment) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -3842,27 +3842,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain34(
 // MarshalJSON supports json.Marshaler interface
 func (v Comment) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain34(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain34(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v Comment) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain34(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain34(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *Comment) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain34(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain34(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *Comment) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain34(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain34(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain35(in *jlexer.Lexer, out *ActorToAdd) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain35(in *jlexer.Lexer, out *ActorToAdd) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -3907,7 +3907,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain35(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain35(out *jwriter.Writer, in ActorToAdd) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain35(out *jwriter.Writer, in ActorToAdd) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -3952,27 +3952,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain35(
 // MarshalJSON supports json.Marshaler interface
 func (v ActorToAdd) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain35(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain35(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v ActorToAdd) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain35(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain35(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *ActorToAdd) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain35(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain35(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *ActorToAdd) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain35(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain35(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain36(in *jlexer.Lexer, out *ActorResponse) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain36(in *jlexer.Lexer, out *ActorResponse) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -4005,7 +4005,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain36(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain36(out *jwriter.Writer, in ActorResponse) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain36(out *jwriter.Writer, in ActorResponse) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -4025,27 +4025,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain36(
 // MarshalJSON supports json.Marshaler interface
 func (v ActorResponse) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain36(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain36(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v ActorResponse) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain36(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain36(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *ActorResponse) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain36(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain36(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *ActorResponse) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain36(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain36(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain37(in *jlexer.Lexer, out *ActorPreview) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain37(in *jlexer.Lexer, out *ActorPreview) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -4080,7 +4080,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain37(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain37(out *jwriter.Writer, in ActorPreview) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain37(out *jwriter.Writer, in ActorPreview) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -4105,27 +4105,27 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain37(
 // MarshalJSON supports json.Marshaler interface
 func (v ActorPreview) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain37(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain37(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v ActorPreview) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain37(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain37(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *ActorPreview) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain37(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain37(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *ActorPreview) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain37(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain37(l, v)
 }
-func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain38(in *jlexer.Lexer, out *ActorData) {
+func easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain38(in *jlexer.Lexer, out *ActorData) {
 	isTopLevel := in.IsStart()
 	if in.IsNull() {
 		if isTopLevel {
@@ -4195,7 +4195,7 @@ func easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain38(
 		in.Consumed()
 	}
 }
-func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain38(out *jwriter.Writer, in ActorData) {
+func easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain38(out *jwriter.Writer, in ActorData) {
 	out.RawByte('{')
 	first := true
 	_ = first
@@ -4261,23 +4261,23 @@ func easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain38(
 // MarshalJSON supports json.Marshaler interface
 func (v ActorData) MarshalJSON() ([]byte, error) {
 	w := jwriter.Writer{}
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain38(&w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain38(&w, v)
 	return w.Buffer.BuildBytes(), w.Error
 }
 
 // MarshalEasyJSON supports easyjson.Marshaler interface
 func (v ActorData) MarshalEasyJSON(w *jwriter.Writer) {
-	easyjson3e1fa5ecEncodeGithubComGoParkMailRu20241NetrunnersInternalDomain38(w, v)
+	easyjson3e1fa5ecEncodeGithubComSanExpettDiplomaInternalDomain38(w, v)
 }
 
 // UnmarshalJSON supports json.Unmarshaler interface
 func (v *ActorData) UnmarshalJSON(data []byte) error {
 	r := jlexer.Lexer{Data: data}
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain38(&r, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain38(&r, v)
 	return r.Error()
 }
 
 // UnmarshalEasyJSON supports easyjson.Unmarshaler interface
 func (v *ActorData) UnmarshalEasyJSON(l *jlexer.Lexer) {
-	easyjson3e1fa5ecDecodeGithubComGoParkMailRu20241NetrunnersInternalDomain38(l, v)
+	easyjson3e1fa5ecDecodeGithubComSanExpettDiplomaInternalDomain38(l, v)
 }

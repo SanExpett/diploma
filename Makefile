@@ -1,7 +1,7 @@
 .PHONY: all build run stop clean proto test lint docker-up docker-down
 
 # Переменные для сервисов
-DOCKER_COMPOSE := docker-compose
+DOCKER_COMPOSE := docker compose
 GO            := go
 SERVICES      := app films users sessions
 APP_PORT      := 8081
@@ -27,12 +27,12 @@ YELLOW := $(shell tput -Txterm setaf 3)
 RESET  := $(shell tput -Txterm sgr0)
 
 # Основные команды
-all: postgres-up migrate-up proto docker-build docker-up prometheus-up grafana-up
+all: postgres-up migrate-up proto docker-build docker-up prometheus-up grafana-up zipkin-up
 
 # Сборка всех сервисов локально
 build:
 	@echo "${GREEN}Сборка всех сервисов...${RESET}"
-	$(GO) mod download
+	$(GO) mod download 
 	@for service in $(SERVICES); do \
 		echo "${YELLOW}Сборка $$service...${RESET}"; \
 		$(GO) build -o ./bin/$$service ./cmd/$$service; \
