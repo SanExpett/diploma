@@ -3,7 +3,7 @@
 # Переменные для сервисов
 DOCKER_COMPOSE := docker compose
 GO            := go
-SERVICES      := app films users sessions
+SERVICES      := films users sessions app
 APP_PORT      := 8081
 SESSIONS_PORT := 8010
 FILMS_PORT    := 8020
