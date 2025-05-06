@@ -15,7 +15,7 @@ POSTGRES_PASSWORD := postgres
 POSTGRES_DB       := nimbus
 POSTGRES_PORT     := 5432
 POSTGRES_HOST     := localhost
-MIGRATION_PATH    := ./db/migrations
+MIGRATION_PATH    := /migrations
 
 # Порты для мониторинга
 PROMETHEUS_PORT := 9090

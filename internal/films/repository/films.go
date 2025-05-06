@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"log"
 	"strings"
 	"time"
 
@@ -419,6 +420,7 @@ func (storage *FilmsStorage) GetFilmDataByUuid(uuid string) (domain.CommonFilmDa
 func (storage *FilmsStorage) AddFilm(film domain.FilmToAdd) error {
 	tx, err := storage.pool.BeginTx(context.Background(), pgx.TxOptions{IsoLevel: pgx.ReadCommitted})
 	if err != nil {
+		log.Printf("failed to begin transaction to add film: %v", err)
 		return fmt.Errorf("failed to begin transaction to add film: %w: %w", err,
 			myerrors.ErrFailedToBeginTransaction)
 	}
@@ -438,7 +440,8 @@ func (storage *FilmsStorage) AddFilm(film domain.FilmToAdd) error {
 	)
 	err = tx.QueryRow(context.Background(), getAmountOfFilmsByName, film.FilmData.Title).Scan(&filmFlag)
 	if err != nil {
-		return fmt.Errorf("failed to get amount of directors: %w: %w", err,
+		log.Printf("failed to get amount of films: %v", err)
+		return fmt.Errorf("failed to get amount of films: %w: %w", err,
 			myerrors.ErrFailInQueryRow)
 	}
 	if filmFlag != 0 {
