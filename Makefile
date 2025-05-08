@@ -38,6 +38,13 @@ build:
 		$(GO) build -o ./bin/$$service ./cmd/$$service; \
 	done
 
+# Команды разработки без мониторинга
+dev-up: postgres-up migrate-up docker-build docker-up
+	@echo "${GREEN}Запуск проекта в режиме разработки (без мониторинга)...${RESET}"
+
+dev-down: docker-down postgres-down
+	@echo "${GREEN}Остановка сервисов разработки...${RESET}"
+
 # Docker команды
 docker-build:
 	@echo "${GREEN}Сборка Docker образов...${RESET}"
@@ -67,6 +74,21 @@ postgres-create:
 postgres-drop:
 	@echo "${GREEN}Удаление базы данных...${RESET}"
 	@docker-compose exec -T postgres dropdb --username=$(POSTGRES_USER) $(POSTGRES_DB)
+
+# Очистка и переинициализация базы
+db-reinit: postgres-down
+	@echo "${GREEN}Переинициализация базы данных...${RESET}"
+	@docker-compose up -d postgres
+	@sleep 3
+	@docker-compose exec -T postgres dropdb --username=$(POSTGRES_USER) --if-exists $(POSTGRES_DB)
+	@docker-compose exec -T postgres createdb --username=$(POSTGRES_USER) --owner=$(POSTGRES_USER) $(POSTGRES_DB)
+	@docker-compose run --rm migrate \
+		-path=$(MIGRATION_PATH) \
+		-database="postgres://$(POSTGRES_USER):$(POSTGRES_PASSWORD)@postgres:$(POSTGRES_PORT)/$(POSTGRES_DB)?sslmode=disable" \
+		force $(shell docker-compose run --rm migrate \
+			-path=$(MIGRATION_PATH) \
+			-database="postgres://$(POSTGRES_USER):$(POSTGRES_PASSWORD)@postgres:$(POSTGRES_PORT)/$(POSTGRES_DB)?sslmode=disable" \
+			version)
 
 # Миграции
 migrate-up:
@@ -153,7 +175,7 @@ status:
 	@echo "${GREEN}Статус Docker контейнеров:${RESET}"
 	$(DOCKER_COMPOSE) ps
 	@echo "\n${GREEN}Статус PostgreSQL:${RESET}"
-	@docker-compose exec postgres pg_isready -U $(POSTGRES_USER) -d $(POSTGRES_DB) || echo "PostgreSQL не запущен"
+	@docker-compose exec postgres pg_is_ready -U $(POSTGRES_USER) -d $(POSTGRES_DB) || echo "PostgreSQL не запущен"
 	@echo "\n${GREEN}Статус метрик:${RESET}"
 	@curl -s http://localhost:$(APP_PORT)/metrics > /dev/null && echo "API Gateway metrics ✅" || echo "API Gateway metrics ❌"
 	@curl -s http://localhost:$(FILMS_PORT)/metrics > /dev/null && echo "Films service metrics ✅" || echo "Films service metrics ❌"
@@ -182,3 +204,5 @@ help:
 	@echo "make test        - Запуск тестов"
 	@echo "make status      - Проверка статуса всех компонентов"
 	@echo "make clean       - Очистка проекта"
+	@echo "make dev-up     - Запуск проекта без систем мониторинга"
+	@echo "make dev-down   - Остановка сервисов разработки"

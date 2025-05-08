@@ -61,17 +61,18 @@ func main() {
 	}
 	sugarLogger := logger.Sugar()
 
-	authConn, err := grpc.Dial("127.0.0.1:8010", grpc.WithTransportCredentials(insecure.NewCredentials()))
+	// для локального запуска коннектиться по 127.0.0.1, в докере имя контейнера
+	authConn, err := grpc.Dial("sessions:8010", grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	filmsConn, err := grpc.Dial("127.0.0.1:8020", grpc.WithTransportCredentials(insecure.NewCredentials()))
+	filmsConn, err := grpc.Dial("films:8020", grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	usersConn, err := grpc.Dial("127.0.0.1:8030", grpc.WithTransportCredentials(insecure.NewCredentials()))
+	usersConn, err := grpc.Dial("users:8030", grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		log.Fatal(err)
 	}

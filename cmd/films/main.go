@@ -48,9 +48,10 @@ func main() {
 	}
 	sugarLogger := logger.Sugar()
 
+	// для локального запуска коннектиться по 127.0.0.1, в докере имя контейнера
 	pool, err := pgxpool.New(context.Background(), fmt.Sprintf(
 		"host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
-		"localhost",
+		"postgres",
 		"5432",
 		"postgres",
 		"postgres",
