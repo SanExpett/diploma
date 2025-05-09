@@ -108,13 +108,12 @@ services:
       - app_network
     depends_on:
       - app
-      - cadvisor
-      - node_exporter
     restart: always
 
   cadvisor:
-    image: gcr.io/cadvisor/cadvisor-amd64:v0.49.1
+    image: gcr.io/cadvisor/cadvisor:v0.47.1
     container_name: cadvisor
+    platform: linux/arm64
     privileged: true
     ports:
       - "8090:8080"
@@ -126,20 +125,29 @@ services:
     networks:
       - app_network
     restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 512M
 
   node_exporter:
-    image: quay.io/prometheus/node-exporter:v1.3.1
+    image: quay.io/prometheus/node-exporter:latest
     container_name: node_exporter
-    command:
-      - '--path.rootfs=/host'
-    pid: host
+    platform: linux/arm64
     ports:
       - "9100:9100"
-    volumes:
-      - '/:/host:ro,rslave'
     networks:
       - app_network
     restart: always
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.sysfs=/host/sys'
+      - '--path.rootfs=/host'
+      - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/host:ro
 
   grafana:
     image: grafana/grafana:latest

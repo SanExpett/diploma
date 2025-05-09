@@ -27,7 +27,7 @@ YELLOW := $(shell tput -Txterm setaf 3)
 RESET  := $(shell tput -Txterm sgr0)
 
 # Основные команды
-all: postgres-up migrate-up proto docker-build docker-up prometheus-up grafana-up zipkin-up
+all: postgres-up migrate-up proto docker-build docker-up prometheus-up grafana-up
 
 # Сборка всех сервисов локально
 build:
@@ -115,7 +115,11 @@ migrate-status:
 # Мониторинг
 prometheus-up:
 	@echo "${GREEN}Запуск Prometheus...${RESET}"
-	@docker-compose up -d prometheus cadvisor node_exporter
+	@docker-compose up -d prometheus
+	@echo "${GREEN}Запуск cAdvisor...${RESET}"
+	@docker-compose up -d cadvisor || echo "${YELLOW}Ошибка запуска cAdvisor, продолжаем...${RESET}"
+	@echo "${GREEN}Запуск node_exporter...${RESET}"
+	@docker-compose up -d node_exporter || echo "${YELLOW}Ошибка запуска node_exporter, продолжаем...${RESET}"
 
 grafana-up:
 	@echo "${GREEN}Запуск Grafana...${RESET}"
