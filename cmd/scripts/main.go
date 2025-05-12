@@ -42,7 +42,7 @@ func insert() error {
 }
 
 func insertInternal() error {
-	jsonData, err := os.ReadFile("data/internal.json")
+	jsonData, err := os.ReadFile("cmd/scripts/data/internal.json")
 	if err != nil {
 		return err
 	}
@@ -62,7 +62,7 @@ func insertInternal() error {
 }
 
 func insertUsers() error {
-	jsonData, err := os.ReadFile("data/users.json")
+	jsonData, err := os.ReadFile("cmd/scripts/data/users.json")
 	if err != nil {
 		log.Printf("failed to read users data: %v \n", err)
 		return err
@@ -98,7 +98,7 @@ func insertUsers() error {
 }
 
 func insertComments() {
-	jsonData, err := os.ReadFile("data/users.json")
+	jsonData, err := os.ReadFile("cmd/scripts/data/users.json")
 	if err != nil {
 		log.Printf("failed to read users data: %v \n", err)
 
