@@ -1,0 +1,14 @@
+{
+  "actors": [
+    {
+      "uuid": "1",
+      "name": "Actor 1",
+      "avatar": "Avatar 1"
+    },
+    {
+      "uuid": "2",
+      "name": "Actor 2",
+      "avatar": "Avatar 2"
+    }
+  ]
+}

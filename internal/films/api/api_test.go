@@ -2,6 +2,8 @@ package api
 
 import (
 	"context"
+	"encoding/json"
+	"os"
 	"testing"
 	"time"
 
@@ -30,6 +32,9 @@ func TestFilmsServer_GetAllFilmsPreviews(t *testing.T) {
 
 	req := &session.AllFilmsPreviewsRequest{}
 	resp, err := server.GetAllFilmsPreviews(ctx, req)
+
+	respB, _ := json.Marshal(resp)
+	os.WriteFile("tests_data/output/GetAllFilmsPreviews.json", respB, os.ModePerm)
 
 	require.NoError(t, err)
 	assert.Len(t, resp.Films, len(expectedFilms))
@@ -130,6 +135,12 @@ func TestFilmsServer_GetActorsByFilm(t *testing.T) {
 
 	req := &session.ActorsByFilmRequest{Uuid: "1"}
 	resp, err := server.GetActorsByFilm(ctx, req)
+
+	reqB, _ := json.Marshal(req)
+	os.WriteFile("tests_data/input/GetActorsByFilm.json", reqB, os.ModePerm)
+
+	respB, _ := json.Marshal(resp)
+	os.WriteFile("tests_data/output/GetActorsByFilm.json", respB, os.ModePerm)
 
 	require.NoError(t, err)
 	assert.Len(t, resp.Actors, len(expectedActors))

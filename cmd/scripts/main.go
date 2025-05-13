@@ -22,19 +22,19 @@ func main() {
 }
 
 func insert() error {
-	err := insertInternal()
-	if err != nil {
-		log.Printf("failed to insert internal data: %v \n", err)
+	//err := insertInternal()
+	//if err != nil {
+	//	log.Printf("failed to insert internal data: %v \n", err)
+	//
+	//	return err
+	//}
 
-		return err
-	}
-
-	err = insertUsers()
-	if err != nil {
-		log.Printf("failed to insert users data: %v \n", err)
-
-		return err
-	}
+	//err := insertUsers()
+	//if err != nil {
+	//	log.Printf("failed to insert users data: %v \n", err)
+	//
+	//	return err
+	//}
 
 	insertComments()
 
@@ -82,6 +82,8 @@ func insertUsers() error {
 		}
 		defer resp.Body.Close()
 
+		log.Printf("resp cookies: %v \n", resp.Cookies())
+
 		body, err := io.ReadAll(resp.Body)
 		if err != nil {
 			log.Printf("failed to read response: %v \n", err)
@@ -106,7 +108,7 @@ func insertComments() {
 	}
 
 	var users []struct {
-		Email    string `json:"email"`
+		Email    string `json:"login"`
 		Password string `json:"password"`
 	}
 
@@ -127,7 +129,7 @@ func insertComments() {
 	for _, user := range users {
 		// Login to get access cookie
 		loginData := map[string]string{
-			"email":    user.Email,
+			"login":    user.Email,
 			"password": user.Password,
 		}
 		loginJSON, err := json.Marshal(loginData)
@@ -142,6 +144,8 @@ func insertComments() {
 			continue
 		}
 		defer loginResp.Body.Close()
+
+		log.Printf("loginResp cookies: %v\n", loginResp.Cookies())
 
 		if loginResp.StatusCode != http.StatusOK {
 			body, _ := io.ReadAll(loginResp.Body)
@@ -208,6 +212,7 @@ func insertComments() {
 				AuthorUuid: uuidCookie.Value,
 				FilmUuid:   film.Uuid,
 				Text:       comments[rand.Intn(len(comments))],
+				Score:      2,
 			}
 
 			commentJSON, err := json.Marshal(commentData)

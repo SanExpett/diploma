@@ -46,11 +46,17 @@ func NewUsersServer(service UsersService, logger *zap.SugaredLogger) *UsersServe
 func (server *UsersServer) CreateUser(ctx context.Context,
 	req *session.CreateUserRequest) (res *session.CreateUserResponse, err error) {
 	requestId := ctx.Value(reqid.ReqIDKey)
+
+	server.logger.Infof("[reqid=%s] creating user started: %v\n", requestId, req.User)
+
 	err = server.usersService.CreateUser(ctx, convertUserSignUpToRegular(req.User))
 	if err != nil {
 		server.logger.Errorf("[reqid=%s] failed to create user: %v\n", requestId, err)
 		return nil, fmt.Errorf("[reqid=%s] failed to create user: %v\n", requestId, err)
 	}
+
+	server.logger.Infof("[reqid=%s] creating user finished: %v\n", requestId, req.User)
+
 	return res, nil
 }
 

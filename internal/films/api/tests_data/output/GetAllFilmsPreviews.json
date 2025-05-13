@@ -1,0 +1,14 @@
+{
+  "films": [
+    {
+      "uuid": "1",
+      "title": "Film 1",
+      "director": "Director 1"
+    },
+    {
+      "uuid": "2",
+      "title": "Film 2",
+      "director": "Director 2"
+    }
+  ]
+}
