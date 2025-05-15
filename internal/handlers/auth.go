@@ -1,12 +1,10 @@
 package handlers
 
 import (
-	"context"
 	"fmt"
 	"net/http"
 	"os"
 
-	"github.com/dgrijalva/jwt-go"
 	"github.com/mailru/easyjson"
 	"go.uber.org/zap"
 
@@ -20,33 +18,6 @@ import (
 var (
 	tokenCookieExpirationTime = 48 * 3600
 )
-
-type AuthService interface {
-	CreateUser(ctx context.Context, user domain.UserSignUp) error
-	RemoveUser(ctx context.Context, email string) error
-	HasUser(ctx context.Context, email, password string) error
-	GetUser(ctx context.Context, email string) (domain.User, error)
-	ChangeUserPassword(ctx context.Context, email, newPassword string) (domain.User, error)
-	ChangeUserName(ctx context.Context, email, newName string) (domain.User, error)
-	GetUserDataByUuid(ctx context.Context, uuid string) (domain.User, error)
-	GetUserPreview(ctx context.Context, uuid string) (domain.UserPreview, error)
-	ChangeUserPasswordByUuid(ctx context.Context, uuid, newPassword string) (domain.User, error)
-	ChangeUserNameByUuid(ctx context.Context, uuid, newName string) (domain.User, error)
-	IsTokenValid(token *http.Cookie) (jwt.MapClaims, error)
-	GenerateTokens(login string, isAdmin bool, version uint32) (tokenSigned string, err error)
-}
-
-type SessionService interface {
-	Add(ctx context.Context, login string, token string, version uint32) (err error)
-	DeleteSession(ctx context.Context, login string, token string) (err error)
-	Update(ctx context.Context, login string, token string) (err error)
-	CheckVersion(ctx context.Context, login string, token string, usersVersion uint32) (hasSession bool, err error)
-	GetVersion(ctx context.Context, login string, token string) (version uint32, err error)
-	HasSession(ctx context.Context, login string, token string) error
-	CheckAllUserSessionTokens(ctx context.Context, login string) error
-	GenerateTokens(login string, isAdmin bool, version uint32) (tokenSigned string, err error)
-	IsTokenValid(token *http.Cookie) (jwt.MapClaims, error)
-}
 
 type AuthPageHandlers struct {
 	usersClient    *session.UsersClient

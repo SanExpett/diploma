@@ -22,19 +22,19 @@ func main() {
 }
 
 func insert() error {
-	//err := insertInternal()
-	//if err != nil {
-	//	log.Printf("failed to insert internal data: %v \n", err)
-	//
-	//	return err
-	//}
+	err := insertInternal()
+	if err != nil {
+		log.Printf("failed to insert internal data: %v \n", err)
 
-	//err := insertUsers()
-	//if err != nil {
-	//	log.Printf("failed to insert users data: %v \n", err)
-	//
-	//	return err
-	//}
+		return err
+	}
+
+	err = insertUsers()
+	if err != nil {
+		log.Printf("failed to insert users data: %v \n", err)
+
+		return err
+	}
 
 	insertComments()
 
@@ -47,15 +47,29 @@ func insertInternal() error {
 		return err
 	}
 
-	resp, err := http.Post("http://127.0.0.1:8081/api/films/add", "application/json", bytes.NewBuffer(jsonData))
+	var filmsToAdd []*domain.FilmToAdd
+
+	err = json.Unmarshal(jsonData, &filmsToAdd)
 	if err != nil {
 		return err
 	}
-	defer resp.Body.Close()
 
-	_, err = io.ReadAll(resp.Body)
-	if err != nil {
-		return err
+	for _, filmToAdd := range filmsToAdd {
+		filmB, err := json.Marshal(&filmToAdd)
+		if err != nil {
+			return err
+		}
+
+		resp, err := http.Post("http://127.0.0.1:8081/api/films/add", "application/json", bytes.NewBuffer(filmB))
+		if err != nil {
+			return err
+		}
+		defer resp.Body.Close()
+
+		_, err = io.ReadAll(resp.Body)
+		if err != nil {
+			return err
+		}
 	}
 
 	return nil
@@ -124,6 +138,11 @@ func insertComments() {
 		"Interesting plot",
 		"Would recommend to watch",
 		"Nice movie experience",
+		"Excellent performance by the actors",
+		"Masterpiece of cinematography",
+		"Captivating from start to finish",
+		"A must-see film",
+		"Unforgettable viewing experience",
 	}
 
 	for _, user := range users {
@@ -212,7 +231,7 @@ func insertComments() {
 				AuthorUuid: uuidCookie.Value,
 				FilmUuid:   film.Uuid,
 				Text:       comments[rand.Intn(len(comments))],
-				Score:      2,
+				Score:      uint32(rand.Intn(5) + 1),
 			}
 
 			commentJSON, err := json.Marshal(commentData)

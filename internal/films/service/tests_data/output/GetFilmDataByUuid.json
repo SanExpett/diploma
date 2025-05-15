@@ -1,0 +1,17 @@
+{
+  "uuid": "123",
+  "isSerial": false,
+  "preview": "Mock Preview",
+  "title": "Mock Title",
+  "link": "",
+  "director": "Mock Director",
+  "averageScore": 0,
+  "scoresCount": 0,
+  "duration": 120,
+  "date": "0001-01-01T00:00:00Z",
+  "data": "Mock Data",
+  "ageLimit": 18,
+  "seasons": null,
+  "genres": null,
+  "withSubscription": false
+}

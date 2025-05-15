@@ -49,7 +49,12 @@ func WriteSuccess(w http.ResponseWriter, req *http.Request, metrics *metrics.Htt
 		return err
 	}
 
-	pathTemplate, err := mux.CurrentRoute(req).GetPathTemplate()
+	curRoute := mux.CurrentRoute(req)
+	if curRoute == nil {
+		return fmt.Errorf("unable to get current route")
+	}
+
+	pathTemplate, err := curRoute.GetPathTemplate()
 	if err != nil {
 		return fmt.Errorf("unable to get path template: %w", err)
 	}
@@ -78,7 +83,12 @@ func WriteError(w http.ResponseWriter, req *http.Request, metrics *metrics.HttpM
 		return err
 	}
 
-	pathTemplate, err := mux.CurrentRoute(req).GetPathTemplate()
+	curRoute := mux.CurrentRoute(req)
+	if curRoute == nil {
+		return fmt.Errorf("unable to get current route")
+	}
+
+	pathTemplate, err := curRoute.GetPathTemplate()
 	if err != nil {
 		return fmt.Errorf("unable to get path template: %w", err)
 	}
@@ -90,7 +100,12 @@ func WriteError(w http.ResponseWriter, req *http.Request, metrics *metrics.HttpM
 
 func WriteResponse(w http.ResponseWriter, r *http.Request, metrics *metrics.HttpMetrics, jsonResponse any,
 	requestID any) error {
-	pathTemplate, err := mux.CurrentRoute(r).GetPathTemplate()
+	curRoute := mux.CurrentRoute(r)
+	if curRoute == nil {
+		return fmt.Errorf("unable to get current route")
+	}
+
+	pathTemplate, err := curRoute.GetPathTemplate()
 	if err != nil {
 		return fmt.Errorf("unable to get path template: %w", err)
 	}

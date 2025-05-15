@@ -90,6 +90,19 @@ db-reinit: postgres-down
 			-database="postgres://$(POSTGRES_USER):$(POSTGRES_PASSWORD)@postgres:$(POSTGRES_PORT)/$(POSTGRES_DB)?sslmode=disable" \
 			version)
 
+# Очистка данных в PostgreSQL
+clean-db-data:
+	@echo "${GREEN}Очистка данных в базе данных...${RESET}"
+	@docker-compose exec -T postgres psql -U $(POSTGRES_USER) -d $(POSTGRES_DB) -c "\
+		DO \$$\$$ \
+		DECLARE r RECORD; \
+		BEGIN \
+			FOR r IN (SELECT tablename FROM pg_tables WHERE schemaname = 'public') \
+			LOOP \
+				EXECUTE 'TRUNCATE TABLE ' || quote_ident(r.tablename) || ' CASCADE'; \
+			END LOOP; \
+		END \$$\$$;"
+
 # Миграции
 migrate-up:
 	@echo "${GREEN}Применение миграций...${RESET}"

@@ -2,7 +2,9 @@ package service
 
 import (
 	"context"
+	"encoding/json"
 	"errors"
+	"os"
 	"testing"
 
 	"github.com/golang/mock/gomock"
@@ -40,6 +42,9 @@ func TestGetFilmDataByUuid(t *testing.T) {
 
 	filmData, err := service.GetFilmDataByUuid(context.Background(), uuid)
 
+	respB, _ := json.Marshal(&filmData)
+	os.WriteFile("tests_data/output/GetFilmDataByUuid.json", respB, os.ModePerm)
+
 	assert.NoError(t, err)
 	assert.Equal(t, mockFilmData, filmData)
 }
@@ -56,7 +61,7 @@ func TestGetFilmDataByUuid_Error(t *testing.T) {
 	service := NewFilmsService(mockStorage, metrics, mockLogger, "")
 
 	uuid := "1"
-	mockError := errors.New("mock error")
+	mockError := errors.New("mocks error")
 
 	mockStorage.EXPECT().GetFilmDataByUuid(uuid).Return(domain.CommonFilmData{}, mockError)
 
@@ -97,7 +102,7 @@ func TestRemoveFilm_Error(t *testing.T) {
 	service := NewFilmsService(mockStorage, metrics, mockLogger, "")
 
 	uuid := "123"
-	mockError := errors.New("mock error")
+	mockError := errors.New("mocks error")
 
 	mockStorage.EXPECT().RemoveFilm(uuid).Return(mockError)
 
@@ -148,7 +153,7 @@ func TestGetFilmPreview_Error(t *testing.T) {
 	service := NewFilmsService(mockStorage, metrics, mockLogger, "")
 
 	uuid := "123"
-	mockError := errors.New("mock error")
+	mockError := errors.New("mocks error")
 
 	mockStorage.EXPECT().GetFilmPreview(uuid).Return(domain.FilmPreview{}, mockError)
 
@@ -192,7 +197,7 @@ func TestGetAllFilmsPreviews_Error(t *testing.T) {
 
 	service := NewFilmsService(mockStorage, metrics, mockLogger, "")
 
-	mockError := errors.New("mock error")
+	mockError := errors.New("mocks error")
 
 	mockStorage.EXPECT().GetAllFilmsPreviews().Return(nil, mockError)
 
@@ -238,7 +243,7 @@ func TestGetAllFilmComments_Error(t *testing.T) {
 	service := NewFilmsService(mockStorage, metrics, mockLogger, "")
 
 	filmUuid := "123"
-	mockError := errors.New("mock error")
+	mockError := errors.New("mocks error")
 
 	mockStorage.EXPECT().GetAllFilmComments(filmUuid).Return(nil, mockError)
 
@@ -284,7 +289,7 @@ func TestGetAllFilmActors_Error(t *testing.T) {
 	service := NewFilmsService(mockStorage, metrics, mockLogger, "")
 
 	uuid := "123"
-	mockError := errors.New("mock error")
+	mockError := errors.New("mocks error")
 
 	mockStorage.EXPECT().GetActorsByFilm(uuid).Return(nil, mockError)
 
