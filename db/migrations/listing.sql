@@ -118,3 +118,31 @@ CREATE TABLE IF NOT EXISTS film_genre
     FOREIGN KEY (genre_id) REFERENCES genre (id) ON DELETE CASCADE,
     FOREIGN KEY (film_id) REFERENCES film (id) ON DELETE CASCADE
 );
+
+-- Индекс на email пользователей
+-- Ускоряет авторизацию и проверку уникальности email при регистрации
+CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);
+
+-- Индексы для фильмов
+-- Оптимизирует поиск фильмов по названию в поисковой строке
+CREATE INDEX IF NOT EXISTS idx_film_title ON film(title);
+-- Ускоряет фильтрацию контента по наличию подписки и типу (сериал/фильм)
+CREATE INDEX IF NOT EXISTS idx_film_subscription_serial ON film(with_subscription, is_serial);
+
+-- Индекс для комментариев
+-- Оптимизирует получение отсортированных по дате комментариев к конкретному фильму
+CREATE INDEX IF NOT EXISTS idx_comment_film_date ON comment(film_id, added_at DESC);
+
+-- Индекс для избранного
+-- Ускоряет получение списка избранных фильмов пользователя и предотвращает дублирование
+CREATE UNIQUE INDEX IF NOT EXISTS idx_favorite_film_user_film ON favorite_film(user_id, film_id);
+
+-- Индекс для актеров
+-- Оптимизирует поиск актеров по имени в поисковой строке
+CREATE INDEX IF NOT EXISTS idx_actor_name ON actor(name);
+
+-- Индексы для сериалов
+-- Ускоряет получение списка сезонов для конкретного сериала
+CREATE INDEX IF NOT EXISTS idx_season_film_number ON season(film_id, number);
+-- Оптимизирует получение списка серий для конкретного сезона
+CREATE INDEX IF NOT EXISTS idx_episode_season_number ON episode(season_id, number);

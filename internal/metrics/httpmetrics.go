@@ -6,11 +6,13 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 )
 
+// HttpMetrics структура для хранения метрик HTTP-запросов
 type HttpMetrics struct {
-	requestsTotal   *prometheus.CounterVec
-	requestDuration *prometheus.HistogramVec
+	requestsTotal   *prometheus.CounterVec   // Счетчик общего количества HTTP-запросов
+	requestDuration *prometheus.HistogramVec // Гистограмма длительности HTTP-запросов
 }
 
+// NewHttpMetrics создает новый экземпляр структуры HttpMetrics с инициализированными метриками
 func NewHttpMetrics() *HttpMetrics {
 	return &HttpMetrics{
 		requestsTotal: prometheus.NewCounterVec(
@@ -31,15 +33,18 @@ func NewHttpMetrics() *HttpMetrics {
 	}
 }
 
+// Register регистрирует метрики в системе Prometheus
 func (httpMetrics *HttpMetrics) Register() {
 	prometheus.MustRegister(httpMetrics.requestsTotal)
 	prometheus.MustRegister(httpMetrics.requestDuration)
 }
 
+// IncRequestsTotal увеличивает счетчик общего количества запросов для указанного эндпоинта, метода и статуса
 func (httpMetrics *HttpMetrics) IncRequestsTotal(endpoint, method string, status int) {
 	httpMetrics.requestsTotal.WithLabelValues(endpoint, method, fmt.Sprintf("%d", status)).Inc()
 }
 
+// IncRequestDuration добавляет значение длительности запроса в гистограмму для указанного эндпоинта и метода
 func (httpMetrics *HttpMetrics) IncRequestDuration(endpoint, method string, duration float64) {
 	httpMetrics.requestDuration.WithLabelValues(endpoint, method).Observe(duration)
 }

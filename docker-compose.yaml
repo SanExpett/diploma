@@ -19,6 +19,22 @@ services:
       retries: 5
     restart: always
 
+  redis:
+    image: redis:alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - app_network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: always
+
   migrate:
     image: migrate/migrate
     networks:
@@ -85,6 +101,8 @@ services:
       dockerfile: ./cmd/sessions/Dockerfile
     environment:
       SECRETKEY: SECRETKEY
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
     ports:
       - "8010:8010"
       - "8011:8011"
@@ -92,6 +110,8 @@ services:
       - app_network
     depends_on:
       postgres:
+        condition: service_healthy
+      redis:
         condition: service_healthy
     restart: always
 
@@ -174,3 +194,4 @@ networks:
 
 volumes:
   postgres_data:
+  redis_data:
