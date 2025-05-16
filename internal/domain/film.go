@@ -76,17 +76,18 @@ type SerialData struct {
 
 //easyjson:json
 type FilmDataToAdd struct {
-	Title       string    `json:"title"`
-	IsSerial    bool      `json:"isSerial"`
-	Preview     string    `json:"preview"`
-	Director    string    `json:"director"`
-	Data        string    `json:"data"`
-	AgeLimit    uint32    `json:"ageLimit"`
-	Duration    uint32    `json:"duration"`
-	PublishedAt time.Time `json:"publishedAt"`
-	Genres      []string  `json:"genres"`
-	Link        string    `json:"link"`
-	Seasons     []Season  `json:"seasons,omitempty"`
+	Title            string    `json:"title"`
+	IsSerial         bool      `json:"isSerial"`
+	Preview          string    `json:"preview"`
+	Director         string    `json:"director"`
+	Data             string    `json:"data"`
+	AgeLimit         uint32    `json:"ageLimit"`
+	Duration         uint32    `json:"duration"`
+	PublishedAt      time.Time `json:"publishedAt"`
+	Genres           []string  `json:"genres"`
+	Link             string    `json:"link"`
+	WithSubscription bool      `json:"withSubscription"`
+	Seasons          []Season  `json:"seasons,omitempty"`
 }
 
 //easyjson:json

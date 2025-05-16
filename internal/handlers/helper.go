@@ -418,17 +418,18 @@ func convertFilmToAdd(filmToAdd domain.FilmToAdd) *session.FilmToAdd {
 	}
 
 	filmData := session.FilmDataToAdd{
-		Title:       filmToAdd.FilmData.Title,
-		IsSerial:    filmToAdd.FilmData.IsSerial,
-		Preview:     filmToAdd.FilmData.Preview,
-		Director:    filmToAdd.FilmData.Director,
-		Data:        filmToAdd.FilmData.Data,
-		AgeLimit:    filmToAdd.FilmData.AgeLimit,
-		PublishedAt: convertTimeToProto(filmToAdd.FilmData.PublishedAt),
-		Genres:      filmToAdd.FilmData.Genres,
-		Duration:    filmToAdd.FilmData.Duration,
-		Link:        filmToAdd.FilmData.Link,
-		Seasons:     seasons,
+		Title:            filmToAdd.FilmData.Title,
+		IsSerial:         filmToAdd.FilmData.IsSerial,
+		Preview:          filmToAdd.FilmData.Preview,
+		Director:         filmToAdd.FilmData.Director,
+		Data:             filmToAdd.FilmData.Data,
+		AgeLimit:         filmToAdd.FilmData.AgeLimit,
+		PublishedAt:      convertTimeToProto(filmToAdd.FilmData.PublishedAt),
+		Genres:           filmToAdd.FilmData.Genres,
+		Duration:         filmToAdd.FilmData.Duration,
+		Link:             filmToAdd.FilmData.Link,
+		Seasons:          seasons,
+		WithSubscription: filmToAdd.FilmData.WithSubscription,
 	}
 
 	var actors []*session.ActorDataToAdd

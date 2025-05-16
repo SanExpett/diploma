@@ -1827,20 +1827,21 @@ func (x *GetAllGenresResponse) GetGenres() []*GenreFilms {
 }
 
 type FilmDataToAdd struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	Title         string                 `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
-	IsSerial      bool                   `protobuf:"varint,2,opt,name=is_serial,json=isSerial,proto3" json:"is_serial,omitempty"`
-	Preview       string                 `protobuf:"bytes,3,opt,name=preview,proto3" json:"preview,omitempty"`
-	Director      string                 `protobuf:"bytes,4,opt,name=director,proto3" json:"director,omitempty"`
-	Data          string                 `protobuf:"bytes,5,opt,name=data,proto3" json:"data,omitempty"`
-	AgeLimit      uint32                 `protobuf:"varint,6,opt,name=ageLimit,proto3" json:"ageLimit,omitempty"`
-	PublishedAt   *timestamppb.Timestamp `protobuf:"bytes,7,opt,name=publishedAt,proto3" json:"publishedAt,omitempty"`
-	Genres        []string               `protobuf:"bytes,8,rep,name=genres,proto3" json:"genres,omitempty"`
-	Duration      uint32                 `protobuf:"varint,9,opt,name=duration,proto3" json:"duration,omitempty"`
-	Link          string                 `protobuf:"bytes,10,opt,name=link,proto3" json:"link,omitempty"`
-	Seasons       []*Season              `protobuf:"bytes,11,rep,name=seasons,proto3" json:"seasons,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
+	state            protoimpl.MessageState `protogen:"open.v1"`
+	Title            string                 `protobuf:"bytes,1,opt,name=title,proto3" json:"title,omitempty"`
+	IsSerial         bool                   `protobuf:"varint,2,opt,name=is_serial,json=isSerial,proto3" json:"is_serial,omitempty"`
+	Preview          string                 `protobuf:"bytes,3,opt,name=preview,proto3" json:"preview,omitempty"`
+	Director         string                 `protobuf:"bytes,4,opt,name=director,proto3" json:"director,omitempty"`
+	Data             string                 `protobuf:"bytes,5,opt,name=data,proto3" json:"data,omitempty"`
+	AgeLimit         uint32                 `protobuf:"varint,6,opt,name=ageLimit,proto3" json:"ageLimit,omitempty"`
+	PublishedAt      *timestamppb.Timestamp `protobuf:"bytes,7,opt,name=publishedAt,proto3" json:"publishedAt,omitempty"`
+	Genres           []string               `protobuf:"bytes,8,rep,name=genres,proto3" json:"genres,omitempty"`
+	Duration         uint32                 `protobuf:"varint,9,opt,name=duration,proto3" json:"duration,omitempty"`
+	Link             string                 `protobuf:"bytes,10,opt,name=link,proto3" json:"link,omitempty"`
+	Seasons          []*Season              `protobuf:"bytes,11,rep,name=seasons,proto3" json:"seasons,omitempty"`
+	WithSubscription bool                   `protobuf:"varint,12,opt,name=with_subscription,json=withSubscription,proto3" json:"with_subscription,omitempty"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
 }
 
 func (x *FilmDataToAdd) Reset() {
@@ -1948,6 +1949,13 @@ func (x *FilmDataToAdd) GetSeasons() []*Season {
 		return x.Seasons
 	}
 	return nil
+}
+
+func (x *FilmDataToAdd) GetWithSubscription() bool {
+	if x != nil {
+		return x.WithSubscription
+	}
+	return false
 }
 
 type ActorDataToAdd struct {
@@ -3387,7 +3395,7 @@ const file_films_proto_rawDesc = "" +
 	"genre_uuid\x18\x02 \x01(\tR\tgenreUuid\x12*\n" +
 	"\x05films\x18\x03 \x03(\v2\x14.session.FilmPreviewR\x05films\"C\n" +
 	"\x14GetAllGenresResponse\x12+\n" +
-	"\x06genres\x18\x01 \x03(\v2\x13.session.GenreFilmsR\x06genres\"\xd9\x02\n" +
+	"\x06genres\x18\x01 \x03(\v2\x13.session.GenreFilmsR\x06genres\"\x86\x03\n" +
 	"\rFilmDataToAdd\x12\x14\n" +
 	"\x05title\x18\x01 \x01(\tR\x05title\x12\x1b\n" +
 	"\tis_serial\x18\x02 \x01(\bR\bisSerial\x12\x18\n" +
@@ -3400,7 +3408,8 @@ const file_films_proto_rawDesc = "" +
 	"\bduration\x18\t \x01(\rR\bduration\x12\x12\n" +
 	"\x04link\x18\n" +
 	" \x01(\tR\x04link\x12)\n" +
-	"\aseasons\x18\v \x03(\v2\x0f.session.SeasonR\aseasons\"\xe0\x01\n" +
+	"\aseasons\x18\v \x03(\v2\x0f.session.SeasonR\aseasons\x12+\n" +
+	"\x11with_subscription\x18\f \x01(\bR\x10withSubscription\"\xe0\x01\n" +
 	"\x0eActorDataToAdd\x12\x12\n" +
 	"\x04name\x18\x01 \x01(\tR\x04name\x12\x16\n" +
 	"\x06avatar\x18\x02 \x01(\tR\x06avatar\x12:\n" +

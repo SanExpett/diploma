@@ -83,8 +83,8 @@ const insertDirector = `
 		INSERT INTO director (name, avatar, birthday) VALUES ($1, $2, $3) RETURNING id;`
 
 const insertFilm = `
-		INSERT INTO film (title, banner, director, data, age_limit, duration, published_at, s3_link, is_serial) 
-    	VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING id, external_id;`
+		INSERT INTO film (title, banner, director, data, age_limit, duration, published_at, s3_link, is_serial, with_subscription) 
+    	VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING id, external_id;`
 
 const getAmountOfActorsByName = `
 		SELECT COUNT(*)
@@ -471,8 +471,8 @@ func (storage *FilmsStorage) AddFilm(film domain.FilmToAdd) error {
 	}
 
 	err = tx.QueryRow(context.Background(), insertFilm, film.FilmData.Title, film.FilmData.Preview, directorID,
-		film.FilmData.Data, film.FilmData.AgeLimit, film.FilmData.Duration,
-		film.FilmData.PublishedAt, film.FilmData.Link, film.FilmData.IsSerial).Scan(&filmID, &filmUuid)
+		film.FilmData.Data, film.FilmData.AgeLimit, film.FilmData.Duration, film.FilmData.PublishedAt,
+		film.FilmData.Link, film.FilmData.IsSerial, film.FilmData.WithSubscription).Scan(&filmID, &filmUuid)
 	if err != nil {
 		return fmt.Errorf("failed to insert film: %w: %w", err,
 			myerrors.ErrFailInExec)

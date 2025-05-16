@@ -335,7 +335,8 @@
       "duration": 162,
       "publishedAt": "2009-12-18T00:00:00Z",
       "genres": ["фантастика", "боевик", "приключения"],
-      "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/Avatar.mp4"
+      "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/Avatar.mp4",
+      "withSubscription": true
     },
     "actors": [
       {

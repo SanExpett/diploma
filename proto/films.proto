@@ -212,6 +212,7 @@ message FilmDataToAdd {
   uint32 duration = 9;
   string link = 10;
   repeated Season seasons = 11;
+  bool with_subscription = 12;
 }
 
 message ActorDataToAdd {
