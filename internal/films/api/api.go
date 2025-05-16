@@ -56,8 +56,10 @@ func (server *FilmsServer) GetAllFilmsPreviews(ctx context.Context,
 	requestId := ctx.Value(reqid.ReqIDKey)
 	films, err := server.filmsService.GetAllFilmsPreviews(ctx)
 	if err != nil {
-		server.logger.Errorf("[reqid=%s] failed to get all films previews: %v\n", requestId, err)
-		return nil, fmt.Errorf("[reqid=%s] failed to get all films previews: %v\n", requestId, err)
+		server.logger.Errorf("[reqid=%s] failed to get all films previews: %v\n",
+			requestId, err)
+		return nil, fmt.Errorf("[reqid=%s] failed to get all films previews: %v\n",
+			requestId, err)
 	}
 
 	var filmsConverted []*session.FilmPreview

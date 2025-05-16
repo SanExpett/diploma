@@ -7,7 +7,6 @@ CREATE TABLE IF NOT EXISTS users
     password TEXT CHECK (LENGTH(password) <= 64) NOT NULL,
     registered_at TIMESTAMPTZ DEFAULT NOW() NOT NULL,
     birthday TIMESTAMPTZ DEFAULT NOW() NOT NULL,
-    is_admin BOOLEAN DEFAULT FALSE NOT NULL,
     subscription_end_date TIMESTAMPTZ DEFAULT NOW() NOT NULL
 );
 

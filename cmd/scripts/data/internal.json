@@ -1,55 +1,107 @@
-[
+[{
+  "filmData" : {
+    "title": "Побег из Шоушенка",
+    "preview": "https://upload.wikimedia.org/wikipedia/ru/d/de/Movie_poster_the_shawshank_redemption.jpg",
+    "director": "Фрэнк Дарабонт",
+    "data": "Бухгалтер Энди Дюфрейн обвинён в убийстве собственной жены и её любовника. Оказавшись в тюрьме под названием Шоушенк, он сталкивается с жестокостью и беззаконием, царящими по обе стороны решётки. Каждый, кто попадает в эти стены, становится их рабом до конца жизни. Но Энди, обладающий живым умом и доброй душой, находит подход как к заключённым, так и к охранникам, добиваясь их особого к себе расположения.",
+    "ageLimit": 16,
+    "duration": 142,
+    "publishedAt": "1995-01-01T00:00:00Z",
+    "genres": ["драма", "криминал"],
+    "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/%D0%9F%D0%BE%D0%B1%D0%B5%D0%B3%20%D0%B8%D0%B7%20%D0%A8%D0%BE%D1%83%D1%88%D0%B5%D0%BD%D0%BA%D0%B0%20-%20%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9%20%D1%82%D1%80%D0%B5%D0%B9%D0%BB%D0%B5%D1%80%20%281994%29.mp4"
+  },
+  "actors": [
+    {
+      "name": "Тим Роббинс",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/TimRobbinsTIFFSept2012.jpg/548px-TimRobbinsTIFFSept2012.jpg",
+      "birthday": "1958-10-16T00:00:00Z",
+      "career": "Актер, режиссер, сценарист, продюсер",
+      "height": 193,
+      "birthPlace": "Уэст-Ковина, Калифорния, США",
+      "spouse": "Грэйл Маркуиндейл (с 1988 г.)"
+    },
+    {
+      "name": "Морган Фриман",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Morgan_Freeman_Deauville_2018.jpg",
+      "birthday": "1937-06-01T00:00:00Z",
+      "career": "Актер, режиссер, продюсер",
+      "height": 188,
+      "birthPlace": "Мемфис, Теннесси, США",
+      "spouse": "Майрел Фриман (с 1984 г.)"
+    },
+    {
+      "name": "Боб Гантон",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/7/74/Bob_Gunton%2C_1963_senior_photo.jpg",
+      "birthday": "1941-07-13T00:00:00Z",
+      "career": "Актер, сценарист",
+      "height": 185,
+      "birthPlace": "Модесто, Калифорния, США",
+      "spouse": "Каролине Гантон (с 1969 г.)"
+    },
+    {
+      "name": "Уильям Сэдлер",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/8/83/William_Sadler_%28cropped%29.jpg",
+      "birthday": "1950-04-13T00:00:00Z",
+      "career": "Актер",
+      "height": 186,
+      "birthPlace": "Баффало, Нью-Йорк, США",
+      "spouse": "Каролайн Марквард (с 2011 г.)"
+    }
+  ],
+  "directorToAdd": {
+    "name": "Фрэнк Дарабонт",
+    "avatar": "https://upload.wikimedia.org/wikipedia/commons/1/19/Frank_Darabont_at_the_PaleyFest_2011_-_The_Walking_Dead_panel.jpg",
+    "birthday": "1959-01-28T00:00:00Z"
+  }
+},
   {
-    "filmData": {
-      "title": "Побег из Шоушенка",
-      "preview": "https://upload.wikimedia.org/wikipedia/ru/d/de/Movie_poster_the_shawshank_redemption.jpg",
+    "filmData" : {
+      "title": "Зеленая миля",
+      "preview": "https://upload.wikimedia.org/wikipedia/ru/b/b0/Green_mile_film.jpg",
       "director": "Фрэнк Дарабонт",
-      "data": "Бухгалтер Энди Дюфрейн обвинён в убийстве собственной жены и её любовника. Оказавшись в тюрьме под названием Шоушенк, он сталкивается с жестокостью и беззаконием, царящими по обе стороны решётки. Каждый, кто попадает в эти стены, становится их рабом до конца жизни. Но Энди, обладающий живым умом и доброй душой, находит подход как к заключённым, так и к охранникам, добиваясь их особого к себе расположения.",
+      "data": "Пол Эджкомб — начальник блока смертников в тюрьме «Холодная гора», каждый из узников которого однажды проходит «зеленую милю» по пути к месту казни. Пол повидал много заключённых и надзирателей за время работы. Однако гигант Джон Коффи, обвинённый в страшном преступлении, стал одним из самых необычных обитателей блока.",
       "ageLimit": 16,
-      "duration": 142,
-      "publishedAt": "1995-01-01T00:00:00Z",
-      "genres": [
-        "драма",
-        "криминал"
-      ],
-      "link": "https://daimnefilm.hb.ru-msk.vkcs.cloud/%D0%9F%D0%BE%D0%B1%D0%B5%D0%B3%20%D0%B8%D0%B7%20%D0%A8%D0%BE%D1%83%D1%88%D0%B5%D0%BD%D0%BA%D0%B0%20%281994%29%C2%A0%E2%80%94%20%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9%20%D1%82%D1%80%D0%B5%D0%B9%D0%BB%D0%B5%D1%80.mp4"
+      "duration": 189,
+      "publishedAt": "2000-03-16T00:00:00Z",
+      "genres": ["драма", "фэнтези", "триллер"],
+      "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/%D0%97%D0%B5%D0%BB%D1%91%D0%BD%D0%B0%D1%8F%20%D0%9C%D0%B8%D0%BB%D1%8F%20-%20%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9%20%D1%82%D1%80%D0%B5%D0%B9%D0%BB%D0%B5%D1%80%20%28HD%29.mp4"
     },
     "actors": [
       {
-        "name": "Тим Роббинс",
-        "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/TimRobbinsTIFFSept2012.jpg/548px-TimRobbinsTIFFSept2012.jpg",
-        "birthday": "1958-10-16T00:00:00Z",
-        "career": "Актер, режиссер, сценарист, продюсер",
-        "height": 193,
-        "birthPlace": "Уэст-Ковина, Калифорния, США",
-        "spouse": "Грэйл Маркуиндейл (с 1988 г.)"
+        "name": "Том Хэнкс",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/TomHanksPrincEdw031223_%2825_of_41%29_%2853377529999%29_%28cropped%29.jpg/1280px-TomHanksPrincEdw031223_%2825_of_41%29_%2853377529999%29_%28cropped%29.jpg",
+        "birthday": "1956-07-09T00:00:00Z",
+        "career": "Актер, продюсер, режиссер, сценарист",
+        "height": 183,
+        "birthPlace": "Конкорд, Калифорния, США",
+        "spouse": "Рита Уилсон (с 1988 г.)"
       },
       {
-        "name": "Морган Фриман",
-        "avatar": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Morgan_Freeman_Deauville_2018.jpg",
-        "birthday": "1937-06-01T00:00:00Z",
-        "career": "Актер, режиссер, продюсер",
-        "height": 188,
-        "birthPlace": "Мемфис, Теннесси, США",
-        "spouse": "Майрел Фриман (с 1984 г.)"
-      },
-      {
-        "name": "Боб Гантон",
-        "avatar": "https://upload.wikimedia.org/wikipedia/commons/7/74/Bob_Gunton%2C_1963_senior_photo.jpg",
-        "birthday": "1941-07-13T00:00:00Z",
-        "career": "Актер, сценарист",
-        "height": 185,
-        "birthPlace": "Модесто, Калифорния, США",
-        "spouse": "Каролине Гантон (с 1969 г.)"
-      },
-      {
-        "name": "Уильям Сэдлер",
-        "avatar": "https://upload.wikimedia.org/wikipedia/commons/8/83/William_Sadler_%28cropped%29.jpg",
-        "birthday": "1950-04-13T00:00:00Z",
+        "name": "Майкл Кларк Дункан",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/4/4f/MichaelClarkeDuncanJan09.jpg",
+        "birthday": "1957-12-10T00:00:00Z",
         "career": "Актер",
-        "height": 186,
-        "birthPlace": "Баффало, Нью-Йорк, США",
-        "spouse": "Каролайн Марквард (с 2011 г.)"
+        "height": 196,
+        "birthPlace": "Чикаго, Иллинойс, США",
+        "spouse": "Омароси Мэнеболт (2001-2012)"
+      },
+      {
+        "name": "Дэвид Морс",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/2/22/David_Morse_%282015%29.jpg",
+        "birthday": "1953-10-11T00:00:00Z",
+        "career": "Актер, режиссер",
+        "height": 191,
+        "birthPlace": "Ньютон, Массачусетс, США",
+        "spouse": "Сьюзен Вилхельми (с 1982 г.)"
+      },
+      {
+        "name": "Бонни Хант",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/5/57/Bonniehunt06.jpg",
+        "birthday": "1961-09-22T00:00:00Z",
+        "career": "Актриса, комедиант",
+        "height": 175,
+        "birthPlace": "Чикаго, Иллинойс, США",
+        "spouse": "Джон Мёрдок (с 1988 г.)"
       }
     ],
     "directorToAdd": {
@@ -57,5 +109,1024 @@
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/1/19/Frank_Darabont_at_the_PaleyFest_2011_-_The_Walking_Dead_panel.jpg",
       "birthday": "1959-01-28T00:00:00Z"
     }
-  }
-]
+  },
+  {
+    "filmData" : {
+      "title": "Славные парни",
+      "preview": "https://upload.wikimedia.org/wikipedia/ru/9/99/Goodfellas_Cover.jpg",
+      "director": "Мартин Скорсезе",
+      "data": "История о Генри Хилле — начинающем гангстере, занимающемся грабежами вместе с подельниками Джими Конвеем и Томми Де Вито, которые с легкостью убивают любого, кто встаёт у них на пути.",
+      "ageLimit": 18,
+      "duration": 146,
+      "publishedAt": "1990-09-19T00:00:00Z",
+      "genres": ["биография", "криминал", "драма"],
+      "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/%D0%A1%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B5%20%D0%BF%D0%B0%D1%80%D0%BD%D0%B8%20%D0%B4%D1%83%D0%B1%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9%20%D1%82%D1%80%D0%B5%D0%B9%D0%BB%D0%B5%D1%80.mp4"
+    },
+    "actors": [
+      {
+        "name": "Роберт Де Ниро",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/5/58/Robert_De_Niro_Cannes_2016.jpg",
+        "birthday": "1943-08-17T00:00:00Z",
+        "career": "Актер, продюсер, режиссер",
+        "height": 177,
+        "birthPlace": "Нью-Йорк, Нью-Йорк, США",
+        "spouse": "Грейс Хайтовер (с 1997 г.)"
+      },
+      {
+        "name": "Рэй Лиотта",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/5/53/Ray_Liotta_%288140672892%29.jpg",
+        "birthday": "1954-12-18T00:00:00Z",
+        "career": "Актер, продюсер",
+        "height": 183,
+        "birthPlace": "Нью-арк, Нью-Джерси, США",
+        "spouse": "Мишель Грей (с 1981 г.)"
+      },
+      {
+        "name": "Джо Пеши",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/JoePesci-2009.jpg/1280px-JoePesci-2009.jpg",
+        "birthday": "1943-02-09T00:00:00Z",
+        "career": "Актер, комик, певец",
+        "height": 165,
+        "birthPlace": "Ньюарк, Нью-Джерси, США",
+        "spouse": "Клодин Лонго (с 1988 г.)"
+      }
+    ],
+    "directorToAdd": {
+      "name": "Мартин Скорсезе",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Martin_Scorsese_MFF_2023.jpg/1280px-Martin_Scorsese_MFF_2023.jpg",
+      "birthday": "1942-11-17T00:00:00Z"
+    }
+  },
+  {
+    "filmData" : {
+      "title": "Форсаж",
+      "preview": "https://upload.wikimedia.org/wikipedia/ru/3/3b/The_Fast_and_the_Furious.jpg",
+      "director": "Роб Коэн",
+      "data": "Его зовут Брайан, и он — фанат турбин и нитроускорителей. Он пытается попасть в автобанду легендарного Доминика Торетто, чемпиона опасных и незаконных уличных гонок. Брайан также полицейский, и его задание — втереться в доверие к Торетто, подозреваемому в причастности к дерзким грабежам грузовиков, совершаемым прямо на ходу.",
+      "ageLimit": 16,
+      "duration": 106,
+      "publishedAt": "2001-06-22T00:00:00Z",
+      "genres": ["боевик", "триллер", "криминал"],
+      "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/%D0%A4%D0%BE%D1%80%D1%81%D0%B0%D0%B6%201%20_%20%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9%20%D1%82%D1%80%D0%B5%D0%B9%D0%BB%D0%B5%D1%80.mp4"
+    },
+    "actors": [
+      {
+        "name": "Вин Дизель",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Vin_Diesel_by_Gage_Skidmore_2.jpg/1920px-Vin_Diesel_by_Gage_Skidmore_2.jpg",
+        "birthday": "1967-07-18T00:00:00Z",
+        "career": "Актер, продюсер, режиссер, сценарист",
+        "height": 182,
+        "birthPlace": "Нью-Йорк, Нью-Йорк, США",
+        "spouse": "Палома Хименес (с 2007 г.)"
+      },
+      {
+        "name": "Пол Уокер",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/9/91/PaulWalkerEdit-1.jpg",
+        "birthday": "1973-09-12T00:00:00Z",
+        "career": "Актер, продюсер, модель",
+        "height": 187,
+        "birthPlace": "Глендейл, Калифорния, США",
+        "spouse": "Ребекка МакБрайд (с 1998 г.)"
+      },
+      {
+        "name": "Мишель Родригес",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/7/78/Michelle_Rodriguez_Cannes_2015.jpg",
+        "birthday": "1978-07-12T00:00:00Z",
+        "career": "Актриса",
+        "height": 165,
+        "birthPlace": "Сан-Антонио, Техас, США",
+        "spouse": "Одинока"
+      },
+      {
+        "name": "Джордана Брюстер",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/9/90/Jordana_Brewster_at_PaleyFest_2013_2.jpg",
+        "birthday": "1980-04-26T00:00:00Z",
+        "career": "Актриса, модель",
+        "height": 170,
+        "birthPlace": "Панама-Сити, Флорида, США",
+        "spouse": "Эндрю Форм (с 2007 г.)"
+      }
+    ],
+    "directorToAdd": {
+      "name": "Роб Коэн",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/4/41/US_Navy_040618-N-6817C-090_Director_Rob_Cohen_visits_with_Commanding_Officer%2C_USS_Abraham_Lincoln_%28CVN_72%29%2C_Capt._Kendall_L._Card%2C_on_the_bridge_after_the_completion_of_filming%2C_the_upcoming_motion_picture_Stealth_%28cropped%29.JPG",
+      "birthday": "1959-03-12T00:00:00Z"
+    }
+  },
+  {
+    "filmData" : {
+      "title": "Двойной форсаж",
+      "preview": "https://upload.wikimedia.org/wikipedia/ru/9/9d/Two_fast_two_furious_ver5.jpg",
+      "director": "Джон Синглтон",
+      "data": "Бывший полицейский Брайан О`Коннер с напарником Романом Пирсом собирается перевезти крупную сумму грязных денег известного мафиози Картера Верона. Но на самом деле эта работа является только прикрытием для Брайана, который вместе с тайным агентом Моникой Фуэнтес должен уличить изворотливого преступника.",
+      "ageLimit": 16,
+      "duration": 107,
+      "publishedAt": "2003-06-06T00:00:00Z",
+      "genres": ["боевик", "триллер", "криминал"],
+      "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/%D0%A4%D0%BE%D1%80%D1%81%D0%B0%D0%B6%202%20%282003%29%C2%A0%E2%80%94%20%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9%20%D1%82%D1%80%D0%B5%D0%B9%D0%BB%D0%B5%D1%80.mp4.mp4"
+    },
+    "actors": [
+      {
+        "name": "Пол Уокер",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/9/91/PaulWalkerEdit-1.jpg",
+        "birthday": "1973-09-12T00:00:00Z",
+        "career": "Актер, продюсер, модель",
+        "height": 187,
+        "birthPlace": "Глендейл, Калифорния, США",
+        "spouse": "Ребекка МакБрайд (с 1998 г.)"
+      },
+      {
+        "name": "Вин Дизель",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Vin_Diesel_by_Gage_Skidmore_2.jpg/1920px-Vin_Diesel_by_Gage_Skidmore_2.jpg",
+        "birthday": "1967-07-18T00:00:00Z",
+        "career": "Актер, продюсер, режиссер, сценарист",
+        "height": 182,
+        "birthPlace": "Нью-Йорк, Нью-Йорк, США",
+        "spouse": "Палома Хименес (с 2007 г.)"
+      },
+      {
+        "name": "Тайрис Гибсон",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Tyrese_Gibson_%2821479937550%29_%28cropped%29.jpg/1920px-Tyrese_Gibson_%2821479937550%29_%28cropped%29.jpg",
+        "birthday": "1978-12-30T00:00:00Z",
+        "career": "Актер, продюсер, рэпер",
+        "height": 182,
+        "birthPlace": "Уотербури, Коннектикут, США",
+        "spouse": "Саманта Ли (с 2017 г.)"
+      },
+      {
+        "name": "Ева Мендес",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Eva_Mendes_%2852509107291%29_%28cropped%29.png",
+        "birthday": "1974-03-05T00:00:00Z",
+        "career": "Актриса, модель",
+        "height": 168,
+        "birthPlace": "Майами, Флорида, США",
+        "spouse": "Райан Гослинг (с 2011 г. по 2013 г.)"
+      },
+      {
+        "name": "Коул Хаузер",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Cole_Hauser.jpg/1280px-Cole_Hauser.jpg",
+        "birthday": "1975-12-22T00:00:00Z",
+        "career": "Актер",
+        "height": 188,
+        "birthPlace": "Талса, Оклахома, США",
+        "spouse": "Синди Хаузер (с 2006 г.)"
+      }
+    ],
+    "directorToAdd": {
+      "name": "Джон Синглтон",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/John_Singleton_2013.jpg/1024px-John_Singleton_2013.jpg",
+      "birthday": "1968-01-06T00:00:00Z"
+    }
+  },
+  {
+    "filmData" : {
+      "title": "Форсаж: Токийский дрифт",
+      "preview": "https://thumbs.dfs.ivi.ru/storage15/contents/5/7/7710f29ba54a4997dd19b4d8c13cd5.jpg",
+      "director": "Джастин Лин",
+      "data": "Старшеклассник Шон Босуэлл только и делает, что попадает в неприятности. После очередной выходки — импровизированных гонок и аварии — парню уже светит тюрьма, тогда мать решает отправить его к отцу в Японию. В первый же день в японской школе он знакомится с соотечественником, а тот притаскивает нового друга на подпольные соревнования по дрифт-рейсингу. Тут Шону открывается доселе невиданное искусство прохождения поворотов — и он сразу же ввязывается в спор, с позором проиграв который, оказывается должен местному авторитету по имени Хан.",
+      "ageLimit": 16,
+      "duration": 104,
+      "publishedAt": "2006-06-16T00:00:00Z",
+      "genres": ["боевик", "триллер", "криминал"],
+      "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/%D0%A4%D0%BE%D1%80%D1%81%D0%B0%D0%B6%203%20%D0%A2%D1%80%D0%B5%D0%B9%D0%BB%D0%B5%D1%80.%20%D0%A1%20%D0%A0%D0%A3%D0%A1%D0%A1%D0%9A%D0%9E%D0%99%20%D0%9E%D0%97%D0%92%D0%A3%D0%A7%D0%9A%D0%9E%D0%99..mp4.mp4"
+    },
+    "actors": [
+      {
+        "name": "Лукас Блэк",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/5/54/Lucas_Black_Get_Low_TIFF09_cropped.jpg",
+        "birthday": "1982-11-29T00:00:00Z",
+        "career": "Актер",
+        "height": 178,
+        "birthPlace": "Декатур, Алабама, США",
+        "spouse": "Магги О'Брайан (с 2010 г.)"
+      },
+      {
+        "name": "Сун Кан",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Sung_Kang_%28Sundance_2007%29.jpg/1920px-Sung_Kang_%28Sundance_2007%29.jpg",
+        "birthday": "1972-01-19T00:00:00Z",
+        "career": "Актер",
+        "height": 178,
+        "birthPlace": "Сеул, Южная Корея",
+        "spouse": "Ким Чанг Сун (с 2013 г.)"
+      },
+      {
+        "name": "Сонни Чиба",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Chiba-Shinichi-1.jpg/1280px-Chiba-Shinichi-1.jpg",
+        "birthday": "1939-01-22T00:00:00Z",
+        "career": "Актер",
+        "height": 168,
+        "birthPlace": "Фукуока, Япония",
+        "spouse": "Ясуко Мацуо (с 2006 г.)"
+      }
+    ],
+    "directorToAdd": {
+      "name": "Джастин Лин",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Star_Trek_Beyond_Japan_Premiere_Red_Carpet-_Justin_Lin_%2832011084772%29_cropped.jpg/1280px-Star_Trek_Beyond_Japan_Premiere_Red_Carpet-_Justin_Lin_%2832011084772%29_cropped.jpg",
+      "birthday": "1973-10-11T00:00:00Z"
+    }
+  },
+  {
+    "filmData" : {
+      "title": "Аватар",
+      "preview": "https://upload.wikimedia.org/wikipedia/ru/4/4b/Avatar-2009.jpg",
+      "director": "Джеймс Кэмерон",
+      "data": "Бывший морпех Джейк Салли прикован к инвалидному креслу. Несмотря на немощное тело, Джейк в душе по-прежнему остается воином. Он получает задание совершить путешествие в несколько световых лет к базе землян на планете Пандора, где корпорации добывают редкий минерал, имеющий огромное значение для выхода Земли из энергетического кризиса.",
+      "ageLimit": 12,
+      "duration": 162,
+      "publishedAt": "2009-12-18T00:00:00Z",
+      "genres": ["фантастика", "боевик", "приключения"],
+      "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/Avatar.mp4"
+    },
+    "actors": [
+      {
+        "name": "Сэм Уортингтон",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Sam_Worthington_2013.jpg",
+        "birthday": "1976-08-07T00:00:00Z",
+        "career": "Актер",
+        "height": 188,
+        "birthPlace": "Перт, Австралия",
+        "spouse": "Лара Бингл (с 2014 г.)"
+      },
+      {
+        "name": "Зои Салдана",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Avatar_The_Way_of_Water_Tokyo_Press_Conference_Zoe_Salda%C3%B1a_%2852563431865%29_%28cropped2%29.jpg",
+        "birthday": "1978-06-19T00:00:00Z",
+        "career": "Актриса",
+        "height": 170,
+        "birthPlace": "Пассаик, Нью-Джерси, США",
+        "spouse": "Марко Перего (с 2013 г.)"
+      },
+      {
+        "name": "Сигурни Уивер",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Sigourney_Weaver_by_Gage_Skidmore_4.jpg/1280px-Sigourney_Weaver_by_Gage_Skidmore_4.jpg",
+        "birthday": "1949-10-08T00:00:00Z",
+        "career": "Актриса",
+        "height": 182,
+        "birthPlace": "Нью-Йорк, Нью-Йорк, США",
+        "spouse": "Джим Симпсон (с 1984 г.)"
+      }
+    ],
+    "directorToAdd": {
+      "name": "Джеймс Кэмерон",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/James_Cameron_by_Gage_Skidmore.jpg/1280px-James_Cameron_by_Gage_Skidmore.jpg",
+      "birthday": "1954-08-16T00:00:00Z"
+    }
+  },
+  {
+    "filmData" : {
+      "title": "Пацаны",
+      "preview": "https://upload.wikimedia.org/wikipedia/ru/thumb/f/f6/The_Boys_Season_1.jpg/800px-The_Boys_Season_1.jpg",
+      "director": "Джеймс Кэмерон",
+      "data": "Действие сериала разворачивается во вселенной, где люди со сверхспособностями являются мировыми знаменитостями и работают на влиятельную корпорацию «Vought International», которая получает от их эксплуатации огромные доходы. Однако вне своих героических амплуа большинство персонажей отличаются высокомерным поведением и злоупотребляют безнаказанностью. Сериал рассказывает о двух противостоящих группах: «Семёрке», элитной команде «Vought», и отряде «Пацанов» — мстителей, которые хотят разоблачить корпорацию и супергероев.",
+      "ageLimit": 12,
+      "duration": 162,
+      "publishedAt": "2019-07-26T00:00:00Z",
+      "genres": ["фантастика", "боевик", "приключения"],
+      "link": "",
+      "isSerial": true,
+      "seasons": [
+        {
+          "series": [
+            {
+              "title": "1",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S01E01.mp4"
+            },
+            {
+              "title": "2",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S01E02.mp4"
+            },
+            {
+              "title": "3",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S01E03.mp4"
+            },
+            {
+              "title": "4",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S01E04.mp4"
+            },
+            {
+              "title": "5",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S01E05.mp4"
+            },
+            {
+              "title": "6",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S01E06.mp4"
+            },
+            {
+              "title": "7",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S01E07.mp4"
+            },
+            {
+              "title": "8",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S01E08.mp4"
+            }
+          ]
+        },
+        {
+          "series": [
+            {
+              "title": "1",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S02E01.mp4"
+            },
+            {
+              "title": "2",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S02E02.mp4"
+            },
+            {
+              "title": "3",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S02E03.mp4"
+            },
+            {
+              "title": "4",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S02E04.mp4"
+            },
+            {
+              "title": "5",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S02E05.mp4"
+            },
+            {
+              "title": "6",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S02E06.mp4"
+            },
+            {
+              "title": "7",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S02E07.mp4"
+            },
+            {
+              "title": "8",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S02E08.mp4"
+            }
+          ]
+        },
+        {
+          "series": [
+            {
+              "title": "1",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S03E01.mp4"
+            },
+            {
+              "title": "2",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S03E02.mp4"
+            },
+            {
+              "title": "3",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S03E03.mp4"
+            },
+            {
+              "title": "4",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S03E04.mp4"
+            },
+            {
+              "title": "5",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S03E05.mp4"
+            },
+            {
+              "title": "6",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S03E06.mp4"
+            },
+            {
+              "title": "7",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S03E07.mp4"
+            },
+            {
+              "title": "8",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S03E08.mp4"
+            }
+          ]
+        },
+        {
+          "series": [
+            {
+              "title": "1",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S04E01.mp4"
+            },
+            {
+              "title": "2",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S04E02.mp4"
+            },
+            {
+              "title": "3",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S04E03.mp4"
+            },
+            {
+              "title": "4",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S04E04.mp4"
+            },
+            {
+              "title": "5",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S04E05.mp4"
+            },
+            {
+              "title": "6",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S04E06.mp4"
+            },
+            {
+              "title": "7",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S04E07.mp4"
+            },
+            {
+              "title": "8",
+              "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/The.Boys.S04E08.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    "actors": [
+      {
+        "name": "Сэм Уортингтон",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Sam_Worthington_2013.jpg",
+        "birthday": "1976-08-07T00:00:00Z",
+        "career": "Актер",
+        "height": 188,
+        "birthPlace": "Перт, Австралия",
+        "spouse": "Лара Бингл (с 2014 г.)"
+      },
+      {
+        "name": "Зои Салдана",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Avatar_The_Way_of_Water_Tokyo_Press_Conference_Zoe_Salda%C3%B1a_%2852563431865%29_%28cropped2%29.jpg",
+        "birthday": "1978-06-19T00:00:00Z",
+        "career": "Актриса",
+        "height": 170,
+        "birthPlace": "Пассаик, Нью-Джерси, США",
+        "spouse": "Марко Перего (с 2013 г.)"
+      },
+      {
+        "name": "Сигурни Уивер",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Sigourney_Weaver_by_Gage_Skidmore_4.jpg/1280px-Sigourney_Weaver_by_Gage_Skidmore_4.jpg",
+        "birthday": "1949-10-08T00:00:00Z",
+        "career": "Актриса",
+        "height": 182,
+        "birthPlace": "Нью-Йорк, Нью-Йорк, США",
+        "spouse": "Джим Симпсон (с 1984 г.)"
+      }
+    ],
+    "directorToAdd": {
+      "name": "Джеймс Кэмерон",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/James_Cameron_by_Gage_Skidmore.jpg/1280px-James_Cameron_by_Gage_Skidmore.jpg",
+      "birthday": "1954-08-16T00:00:00Z"
+    }
+  },
+  {
+    "filmData" : {
+      "title": "Любовь в большом городе",
+      "preview": "https://upload.wikimedia.org/wikipedia/ru/5/52/%D0%9B%D1%8E%D0%B1%D0%BE%D0%B2%D1%8C_%D0%B2_%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%BC_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5.jpeg",
+      "director": "Марюс Вайсберг",
+      "data": "Действие фильма происходит в Нью-Йорке. Главные герои — зарабатывающий на экскурсиях женатый Артём, стоматолог Игорь и инструктор по прозвищу Сауна. В свободное время трое друзей крутят короткие и ни к чему не обязывающие романы. После одной из вечеринок, на которой они встречают Святого Валентина, герои начинают искать настоящую любовь.",
+      "ageLimit": 16,
+      "duration": 162,
+      "publishedAt": "2009-03-05T00:00:00Z",
+      "genres": ["комедия", "мелодрама", "фэнтези"],
+      "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/Lubov-V-Bolshom.mp4"
+    },
+    "actors": [
+      {
+        "name": "Алексей Чадов",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/2/21/Chadov_Aleksey.jpg",
+        "birthday": "1981-09-02T00:00:00Z",
+        "career": "Актер",
+        "height": 176,
+        "birthPlace": "Солнцево, Московская область, РСФСР, СССР",
+        "spouse": "Агния Дитковските"
+      },
+      {
+        "name": "Вера Брежнева",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/%D0%92%D0%B5%D1%80%D0%B0_%D0%91%D1%80%D0%B5%D0%B6%D0%BD%D0%B5%D0%B2%D0%B0.jpg/800px-%D0%92%D0%B5%D1%80%D0%B0_%D0%91%D1%80%D0%B5%D0%B6%D0%BD%D0%B5%D0%B2%D0%B0.jpg",
+        "birthday": "1982-02-03T00:00:00Z",
+        "career": "Актриса",
+        "height": 171,
+        "birthPlace": "Днепродзержинск, Днепропетровская область, Украинская ССР, СССР",
+        "spouse": "Константин Меладзе"
+      },
+      {
+        "name": "Светлана Ходченкова",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/%D0%A5%D0%BE%D0%B4%D1%87%D0%B5%D0%BD%D0%BA%D0%BE%D0%B2%D0%B0_%D0%A1%D0%B2%D0%B5%D1%82%D0%BB%D0%B0%D0%BD%D0%B0_%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%BE%D0%B2%D0%BD%D0%B0_2017.jpg/800px-%D0%A5%D0%BE%D0%B4%D1%87%D0%B5%D0%BD%D0%BA%D0%BE%D0%B2%D0%B0_%D0%A1%D0%B2%D0%B5%D1%82%D0%BB%D0%B0%D0%BD%D0%B0_%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%BE%D0%B2%D0%BD%D0%B0_2017.jpg",
+        "birthday": "1983-01-21T00:00:00Z",
+        "career": "Актриса",
+        "height": 179,
+        "birthPlace": "Москва, РСФСР, СССР",
+        "spouse": "Владимир Яглыч"
+      }
+    ],
+    "directorToAdd": {
+      "name": "Марюс Вайсберг",
+      "avatar": "https://bp22.ru/wp-content/uploads/c/2/e/c2ed1e911cf981be37db5821a2ee6ebb.jpeg",
+      "birthday": "1971-03-01T00:00:00Z"
+    }
+  },
+  {
+    "filmData" : {
+      "title": "Kingsman: Секретная служба",
+      "preview": "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/7aaafe9c-f4bf-44b5-aeea-3f06ec829a30/600x900",
+      "director": "Мэттью Вон",
+      "data": "Гэри 'Эггси' Анвин, сын погибшего агента, живет в Лондоне. Когда-то его отец спас жизнь своему командиру, Гарри Харт, который дает Эггси шанс изменить свою жизнь, предложив ему вступить в шпионскую организацию 'Kingsman'. Эггси должен пройти трудные испытания и противостоять новому мировому злу.",
+      "ageLimit": 18,
+      "duration": 129,
+      "publishedAt": "2014-12-13T00:00:00Z",
+      "genres": ["боевик", "комедия", "шпионский"],
+      "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/kingsman.mp4"
+    },
+    "actors": [
+      {
+        "name": "Тэрон Эджертон",
+        "avatar": "https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/99be1560-6a6d-476c-a53e-67bed61bd95f/220x330",
+        "birthday": "1989-11-10T00:00:00Z",
+        "career": "Актер",
+        "height": 175,
+        "birthPlace": "Биркенхед, Англия",
+        "spouse": "нет"
+      },
+      {
+        "name": "Колин Ферт",
+        "avatar": "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/2d81ecc9-87c0-4a58-bfb0-90673e124398/220x330",
+        "birthday": "1960-09-10T00:00:00Z",
+        "career": "Актер",
+        "height": 187,
+        "birthPlace": "Грейшотт, Англия",
+        "spouse": "Ливия Джуджолли (1997–2019)"
+      },
+      {
+        "name": "Сэмюэл Л. Джексон",
+        "avatar": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQMYfcBLlhgizPF017p6cbAnAk6uDITSLkIqWg6IBt1qWg2I8dZ",
+        "birthday": "1948-12-21T00:00:00Z",
+        "career": "Актер",
+        "height": 189,
+        "birthPlace": "Вашингтон, округ Колумбия, США",
+        "spouse": "ЛаТанья Ричардсон (с 1980 г.)"
+      }
+    ],
+    "directorToAdd": {
+      "name": "Мэттью Вон",
+      "avatar": "https://avatars.mds.yandex.net/get-kinopoisk-image/10671298/cd39433a-123b-407b-92fa-8daf9e44edad/220x330",
+      "birthday": "1971-03-07T00:00:00Z"
+    }
+  },
+  {
+    "filmData" : {
+      "title": "Хоббит: Нежданное путешествие",
+      "preview": "https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/0e569ebd-0639-416b-92c5-2afffbd5d089/600x900",
+      "director": "Питер Джексон",
+      "data": "Фильм рассказывает о приключениях хоббита Бильбо Бэггинса, который отправляется в опасное путешествие вместе с гномами, чтобы вернуть потерянное королевство Эребор от дракона Смауга. В пути он сталкивается с множеством опасностей и находит волшебное кольцо, которое изменит его судьбу.",
+      "ageLimit": 12,
+      "duration": 169,
+      "publishedAt": "2012-12-14T00:00:00Z",
+      "genres": ["фэнтези", "приключения"],
+      "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/Hobbit.mp4"
+    },
+    "actors": [
+      {
+        "name": "Мартин Фриман",
+        "avatar": "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/61d44bdf-a5f3-4848-912c-f2f81b7a7f5f/220x330",
+        "birthday": "1971-09-08T00:00:00Z",
+        "career": "Актер",
+        "height": 169,
+        "birthPlace": "Олдершот, Англия",
+        "spouse": "Аманда Аббингтон (разошлись)"
+      },
+      {
+        "name": "Иэн Маккеллен",
+        "avatar": "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/2ecde1e6-1e3b-4bc5-b921-5187699ae278/220x330",
+        "birthday": "1939-05-25T00:00:00Z",
+        "career": "Актер",
+        "height": 180,
+        "birthPlace": "Бёрнли, Англия",
+        "spouse": "нет"
+      },
+      {
+        "name": "Ричард Армитидж",
+        "avatar": "https://static.wikia.nocookie.net/doctorwho/images/d/dc/Richard_Armitage.jpg/revision/latest?cb=20240227124351&path-prefix=ru",
+        "birthday": "1971-08-22T00:00:00Z",
+        "career": "Актер",
+        "height": 188,
+        "birthPlace": "Лестер, Англия",
+        "spouse": "нет"
+      }
+    ],
+    "directorToAdd": {
+      "name": "Питер Джексон",
+      "avatar": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR8Z-ASe__vAoUtflnH9HjqgDBMrgagzyFxWJLhSxLcDNHtaThY",
+      "birthday": "1961-10-31T00:00:00Z"
+    }
+  },
+  {
+    "filmData" : {
+      "title": "Оппенгеймер",
+      "preview": "https://avatars.mds.yandex.net/get-kinopoisk-image/4486454/c5292109-642c-4ab0-894a-cc304e1bcec4/600x900",
+      "director": "Кристофер Нолан",
+      "data": "Фильм рассказывает о жизни и карьере Роберта Оппенгеймера, ведущего физика Манхэттенского проекта, который сыграл ключевую роль в создании атомной бомбы. История показывает его научные достижения, моральные дилеммы и влияние на мир.",
+      "ageLimit": 16,
+      "duration": 180,
+      "publishedAt": "2023-07-21T00:00:00Z",
+      "genres": ["биография", "драма", "исторический"],
+      "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/opengay.mp4"
+    },
+    "actors": [
+      {
+        "name": "Киллиан Мерфи",
+        "avatar": "https://media.2x2tv.ru/content/images/size/w1440h1080/2021/10/---2.jpg",
+        "birthday": "1976-05-25T00:00:00Z",
+        "career": "Актер",
+        "height": 175,
+        "birthPlace": "Дуглас, Ирландия",
+        "spouse": "Ивонн Макгиннес (с 2004 г.)"
+      },
+      {
+        "name": "Эмили Блант",
+        "avatar": "https://www.film.ru/sites/default/files/people/1455922-2322660.jpg",
+        "birthday": "1983-02-23T00:00:00Z",
+        "career": "Актриса",
+        "height": 171,
+        "birthPlace": "Лондон, Англия",
+        "spouse": "Джон Красински (с 2010 г.)"
+      },
+      {
+        "name": "Мэтт Деймон",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Matt_Damon%2C_Berlinale_2023_%28cropped%29.jpg/640px-Matt_Damon%2C_Berlinale_2023_%28cropped%29.jpg",
+        "birthday": "1970-10-08T00:00:00Z",
+        "career": "Актер",
+        "height": 178,
+        "birthPlace": "Кембридж, Массачусетс, США",
+        "spouse": "Люсиана Баррозу (с 2005 г.)"
+      }
+    ],
+    "directorToAdd": {
+      "name": "Кристофер Нолан",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/9/95/Christopher_Nolan_Cannes_2018.jpg",
+      "birthday": "1970-07-30T00:00:00Z"
+    }
+  },
+  {
+    "filmData" : {
+      "title": "Хоббит: Пустошь Смауга",
+      "preview": "https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/dd195023-81e0-42bc-9b33-e86ac8abf30e/600x900",
+      "director": "Питер Джексон",
+      "data": "Во второй части трилогии Хоббит Бильбо Бэггинс продолжает своё путешествие с гномами к Одинокой горе. Они должны вернуть своё королевство от дракона Смауга. По пути они встречаются с эльфами, людьми и опасными существами, и Бильбо использует своё новое кольцо, чтобы помочь своим друзьям.",
+      "ageLimit": 12,
+      "duration": 161,
+      "publishedAt": "2013-12-13T00:00:00Z",
+      "genres": ["фэнтези", "приключения"],
+      "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/hobbit2.mp4"
+    },
+    "actors": [
+      {
+        "name": "Мартин Фриман",
+        "avatar": "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/61d44bdf-a5f3-4848-912c-f2f81b7a7f5f/220x330",
+        "birthday": "1971-09-08T00:00:00Z",
+        "career": "Актер",
+        "height": 169,
+        "birthPlace": "Олдершот, Англия",
+        "spouse": "Аманда Аббингтон (разошлись)"
+      },
+      {
+        "name": "Иэн Маккеллен",
+        "avatar": "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/2ecde1e6-1e3b-4bc5-b921-5187699ae278/220x330",
+        "birthday": "1939-05-25T00:00:00Z",
+        "career": "Актер",
+        "height": 180,
+        "birthPlace": "Бёрнли, Англия",
+        "spouse": "нет"
+      },
+      {
+        "name": "Ричард Армитидж",
+        "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgHaR2J1e9KufKr9sRFu6x9N_e4XpBcjTJ82c7kbTAzPjcILkd",
+        "birthday": "1971-08-22T00:00:00Z",
+        "career": "Актер",
+        "height": 188,
+        "birthPlace": "Лестер, Англия",
+        "spouse": "нет"
+      }
+    ],
+    "directorToAdd": {
+      "name": "Питер Джексон",
+      "avatar": "",
+      "birthday": "1961-10-31T00:00:00Z"
+    }
+  },
+  {
+    "filmData" : {
+      "title": "Хоббит: Битва пяти воинств",
+      "preview": "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/ee1276c4-6e67-45cd-94db-8bd47bb21da4/600x900",
+      "director": "Питер Джексон",
+      "data": "В финальной части трилогии 'Хоббит' Бильбо Бэггинс и гномы наконец добираются до Одинокой горы и сталкиваются с драконом Смаугом. Однако их победа вызывает цепь событий, которые приводят к великой битве пяти воинств. Бильбо должен бороться за свою жизнь и за будущее Средиземья.",
+      "ageLimit": 12,
+      "duration": 144,
+      "publishedAt": "2014-12-17T00:00:00Z",
+      "genres": ["фэнтези", "приключения"],
+      "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/hobbit3.mp4"
+    },
+    "actors": [
+      {
+        "name": "Мартин Фриман",
+        "avatar": "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/61d44bdf-a5f3-4848-912c-f2f81b7a7f5f/220x330",
+        "birthday": "1971-09-08T00:00:00Z",
+        "career": "Актер",
+        "height": 169,
+        "birthPlace": "Олдершот, Англия",
+        "spouse": "Аманда Аббингтон (разошлись)"
+      },
+      {
+        "name": "Иэн Маккеллен",
+        "avatar": "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/2ecde1e6-1e3b-4bc5-b921-5187699ae278/220x330",
+        "birthday": "1939-05-25T00:00:00Z",
+        "career": "Актер",
+        "height": 180,
+        "birthPlace": "Бёрнли, Англия",
+        "spouse": "нет"
+      },
+      {
+        "name": "Ричард Армитидж",
+        "avatar": "https://static.wikia.nocookie.net/doctorwho/images/d/dc/Richard_Armitage.jpg/revision/latest?cb=20240227124351&path-prefix=ru",
+        "birthday": "1971-08-22T00:00:00Z",
+        "career": "Актер",
+        "height": 188,
+        "birthPlace": "Лестер, Англия",
+        "spouse": "нет"
+      }
+    ],
+    "directorToAdd": {
+      "name": "Питер Джексон",
+      "avatar": "",
+      "birthday": "1961-10-31T00:00:00Z"
+    }
+  },
+  {
+    "filmData" : {
+      "title": "Kingsman: Золотое кольцо",
+      "preview": "https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/1c1e6d0b-efcc-49ca-82c6-b90c36db7848/600x900",
+      "director": "Мэттью Вон",
+      "data": "После разрушения штаб-квартиры Kingsman и появления новой угрозы, Эггси и Мерлин вынуждены объединиться с американской шпионской организацией Statesman, чтобы спасти мир и победить нового врага.",
+      "ageLimit": 18,
+      "duration": 141,
+      "publishedAt": "2017-09-20T00:00:00Z",
+      "genres": ["боевик", "комедия", "шпионский"],
+      "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/kingsman2.mp4"
+    },
+    "actors": [
+      {
+        "name": "Тэрон Эджертон",
+        "avatar": "https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/99be1560-6a6d-476c-a53e-67bed61bd95f/220x330",
+        "birthday": "1989-11-10T00:00:00Z",
+        "career": "Актер",
+        "height": 175,
+        "birthPlace": "Биркенхед, Англия",
+        "spouse": "нет"
+      },
+      {
+        "name": "Колин Ферт",
+        "avatar": "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/2d81ecc9-87c0-4a58-bfb0-90673e124398/220x330",
+        "birthday": "1960-09-10T00:00:00Z",
+        "career": "Актер",
+        "height": 187,
+        "birthPlace": "Грейшотт, Англия",
+        "spouse": "Ливия Джуджолли (1997–2019)"
+      },
+      {
+        "name": "Джулианна Мур",
+        "avatar": "https://www.film.ru/sites/default/files/people/1455520-3474389.jpg",
+        "birthday": "1960-12-03T00:00:00Z",
+        "career": "Актриса",
+        "height": 160,
+        "birthPlace": "Фейетвилл, Северная Каролина, США",
+        "spouse": "Барт Фрейндлих (с 2003 г.)"
+      }
+    ],
+    "directorToAdd": {
+      "name": "Мэттью Вон",
+      "avatar": "",
+      "birthday": "1971-03-07T00:00:00Z"
+    }
+  },
+  {
+    "filmData" : {
+      "title": "Морпехи",
+      "preview": "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/7ca23c41-c8e5-424f-bd9d-7bb953e6bf88/600x900",
+      "director": "Сэм Мендес",
+      "data": "Фильм основан на автобиографии Энтони Суоффорда и рассказывает о его опыте службы в Корпусе морской пехоты США во время войны в Персидском заливе. Это история о трудностях военной службы, личных переживаниях и товарищеской поддержке.",
+      "ageLimit": 18,
+      "duration": 123,
+      "publishedAt": "2005-11-04T00:00:00Z",
+      "genres": ["драма", "военный", "биография"],
+      "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/morpehi.mp4"
+    },
+    "actors": [
+      {
+        "name": "Джейк Джилленхол",
+        "avatar": "https://www.proficinema.com/upload/iblock/ef1/ef1868384966536efebc386d5253974b.jpg",
+        "birthday": "1980-12-19T00:00:00Z",
+        "career": "Актер",
+        "height": 182,
+        "birthPlace": "Лос-Анджелес, Калифорния, США",
+        "spouse": "нет"
+      },
+      {
+        "name": "Питер Сарсгаард",
+        "avatar": "https://www.film.ru/sites/default/files/people/1457660-1659159.jpg",
+        "birthday": "1971-03-07T00:00:00Z",
+        "career": "Актер",
+        "height": 180,
+        "birthPlace": "Беллевилл, Иллинойс, США",
+        "spouse": "Мэгги Джилленхол (с 2009 г.)"
+      },
+      {
+        "name": "Джейми Фокс",
+        "avatar": "https://www.film.ru/sites/default/files/people/1457006-2276846.jpeg",
+        "birthday": "1967-12-13T00:00:00Z",
+        "career": "Актер",
+        "height": 175,
+        "birthPlace": "Террелл, Техас, США",
+        "spouse": "нет"
+      }
+    ],
+    "directorToAdd": {
+      "name": "Сэм Мендес",
+      "avatar": "https://thumbs.dfs.ivi.ru/storage28/contents/8/1/3dd0fff8f02b260cec4323094b2337.jpg",
+      "birthday": "1965-08-01T00:00:00Z"
+    }
+  },
+  {
+    "filmData" : {
+      "title": "Наполеон",
+      "preview": "https://avatars.mds.yandex.net/get-kinopoisk-image/9784475/f0b70070-f11c-4789-9938-fc482e0c6f09/600x900",
+      "director": "Ридли Скотт",
+      "data": "Фильм рассказывает о взлете и падении одного из самых известных полководцев в истории — Наполеона Бонапарта. История охватывает его военные кампании, политические маневры и личные отношения, которые сформировали судьбу Европы.",
+      "ageLimit": 16,
+      "duration": 158,
+      "publishedAt": "2023-11-22T00:00:00Z",
+      "genres": ["биография", "драма", "исторический"],
+      "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/napoleon.mp4"
+    },
+    "actors": [
+      {
+        "name": "Хоакин Феникс",
+        "avatar": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRngrNOhKNyJNOoZeWlNXTf3FLkSYtaTXeF2prUUAPN-e7_L6mK",
+        "birthday": "1974-10-28T00:00:00Z",
+        "career": "Актер",
+        "height": 173,
+        "birthPlace": "Сан-Хуан, Пуэрто-Рико",
+        "spouse": "Руни Мара (с 2016 г.)"
+      },
+      {
+        "name": "Ванесса Кирби",
+        "avatar": "https://www.proficinema.com/upload/iblock/509/50983ddf5e910a3ec784de70800bb728.jpg",
+        "birthday": "1988-04-18T00:00:00Z",
+        "career": "Актриса",
+        "height": 170,
+        "birthPlace": "Лондон, Англия",
+        "spouse": "нет"
+      },
+      {
+        "name": "Тахар Рахим",
+        "avatar": "https://www.kino-teatr.ru/acter/album/244864/345391.jpg",
+        "birthday": "1981-07-04T00:00:00Z",
+        "career": "Актер",
+        "height": 171,
+        "birthPlace": "Безье, Франция",
+        "spouse": "Лейла Бехти (с 2010 г.)"
+      }
+    ],
+    "directorToAdd": {
+      "name": "Ридли Скотт",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/1/12/NASA_Journey_to_Mars_and_%E2%80%9CThe_Martian%E2%80%9D_%28201508180030HQ%29.jpg",
+      "birthday": "1937-11-30T00:00:00Z"
+    }
+  },
+  {
+    "filmData" : {
+      "title": "Бесславные ублюдки",
+      "preview": "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/5e6dde98-74a8-4c02-b003-01d48e091025/600x900",
+      "director": "Квентин Тарантино",
+      "data": "Фильм рассказывает о группе американских солдат, отправленных во Францию во время Второй мировой войны с тайной миссией уничтожить немецких офицеров. Они собирают отряд из преступников и выходцев из тюрьмы, чтобы выполнить свою опасную задачу.",
+      "ageLimit": 18,
+      "duration": 153,
+      "publishedAt": "2009-08-20T00:00:00Z",
+      "genres": ["военный", "драма"],
+      "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/ubludok.mp4"
+    },
+    "actors": [
+      {
+        "name": "Брэд Питт",
+        "avatar": "https://cs12.pikabu.ru/post_img/big/2020/12/27/5/1609050403124510217.png",
+        "birthday": "1963-12-18T00:00:00Z",
+        "career": "Актер",
+        "height": 180,
+        "birthPlace": "Шавнир, Оклахома, США",
+        "spouse": "Анджелина Джоли (2014–2016)"
+      },
+      {
+        "name": "Майкл Фассбендер",
+        "avatar": "https://cdn.7days.ru/upload/images/697/d6d1eaaaf515adaaa541102b6be6f.jpg",
+        "birthday": "1977-04-02T00:00:00Z",
+        "career": "Актер",
+        "height": 183,
+        "birthPlace": "Гейдельберг, Баден-Вюртемберг, Германия",
+        "spouse": "нет"
+      },
+      {
+        "name": "Мелини Лоран",
+        "avatar": "https://thumbs.dfs.ivi.ru/storage31/contents/3/9/23aa86920ea1c0ac6a3a69813a33a0.jpg",
+        "birthday": "1983-10-03T00:00:00Z",
+        "career": "Актриса",
+        "height": 170,
+        "birthPlace": "Париж, Франция",
+        "spouse": "нет"
+      }
+    ],
+    "directorToAdd": {
+      "name": "Квентин Тарантино",
+      "avatar": "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/c5eef897-dfb2-42a3-bc17-d5346f5dc587/220x330",
+      "birthday": "1963-03-27T00:00:00Z"
+    }
+  },
+  {
+    "filmData" : {
+      "title": "Довод",
+      "preview": "https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/b35131e0-041b-4ebc-af90-7104f2f75821/600x900",
+      "director": "Кристофер Нолан",
+      "data": "Фильм рассказывает о мире, где существует технология обратного времени, позволяющая людям возвращаться в прошлое. Главный герой сталкивается с опасной миссией, чтобы предотвратить ужасное будущее.",
+      "ageLimit": 12,
+      "duration": 150,
+      "publishedAt": "2020-08-26T00:00:00Z",
+      "genres": ["фантастика", "боевик", "триллер"],
+      "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/dovod.mp4"
+    },
+    "actors": [
+      {
+        "name": "Джон Дэвид Вашингтон",
+        "avatar": "https://www.film.ru/sites/default/files/people/7621146-1120167.jpg",
+        "birthday": "1984-07-28T00:00:00Z",
+        "career": "Актер",
+        "height": 175,
+        "birthPlace": "Теннесси, США",
+        "spouse": "нет"
+      },
+      {
+        "name": "Роберт Паттинсон",
+        "avatar": "https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/3bd323c1-327d-42a2-8ab3-95b1b2c88a67/220x330",
+        "birthday": "1986-05-13T00:00:00Z",
+        "career": "Актер",
+        "height": 185,
+        "birthPlace": "Лондон, Англия",
+        "spouse": "нет"
+      },
+      {
+        "name": "Элизабет Дебики",
+        "avatar": "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/45fbbb5a-53cd-4703-9919-45de0845470d/220x330",
+        "birthday": "1995-08-01T00:00:00Z",
+        "career": "Актриса",
+        "height": 163,
+        "birthPlace": "Портленд, Орегон, США",
+        "spouse": "нет"
+      }
+    ],
+    "directorToAdd": {
+      "name": "Кристофер Нолан",
+      "avatar": "https://avatars.mds.yandex.net/get-kinopoisk-image/10900341/c16e1382-d91d-4cfc-b179-ce8757a41b10/220x330",
+      "birthday": "1970-07-30T00:00:00Z"
+    }
+  },
+  {
+    "filmData" : {
+      "title": "Интерстеллар",
+      "preview": "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/430042eb-ee69-4818-aed0-a312400a26bf/600x900",
+      "director": "Кристофер Нолан",
+      "data": "Фильм рассказывает о группе исследователей, отправленных в космос в поисках нового дома для человечества, так как Земля становится необитаемой из-за изменений климата. Они отправляются в межзвездное путешествие, чтобы исследовать черные дыры и параллельные миры.",
+      "ageLimit": 12,
+      "duration": 169,
+      "publishedAt": "2014-10-26T00:00:00Z",
+      "genres": ["фантастика", "драма"],
+      "link": "https://nimbus-project.hb.ru-msk.vkcloud-storage.ru/interstellar.mp4"
+    },
+    "actors": [
+      {
+        "name": "Мэттью Макконахи",
+        "avatar": "https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/7b37ed50-2bb0-4f22-adba-d94023ed9a38/220x330",
+        "birthday": "1969-11-04T00:00:00Z",
+        "career": "Актер",
+        "height": 180,
+        "birthPlace": "Увэлди, Техас, США",
+        "spouse": "Камила Алвес (с 2012 г.)"
+      },
+      {
+        "name": "Энн Хэтэуэй",
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Anne_Hathaway_at_Berlinale_2023_%28cropped_2%29.jpg/800px-Anne_Hathaway_at_Berlinale_2023_%28cropped_2%29.jpg",
+        "birthday": "1982-11-12T00:00:00Z",
+        "career": "Актриса",
+        "height": 173,
+        "birthPlace": "Бруклин, Нью-Йорк, США",
+        "spouse": "Адам Шульман (с 2012 г.)"
+      },
+      {
+        "name": "Джессика Честейн",
+        "avatar": "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/35e92331-afe5-42cd-8df5-eeeab87c647a/220x330",
+        "birthday": "1977-03-24T00:00:00Z",
+        "career": "Актриса",
+        "height": 163,
+        "birthPlace": "Сакраменто, Калифорния, США",
+        "spouse": "нет"
+      }
+    ],
+    "directorToAdd": {
+      "name": "Кристофер Нолан",
+      "avatar": "https://avatars.mds.yandex.net/get-kinopoisk-image/10900341/c16e1382-d91d-4cfc-b179-ce8757a41b10/220x330",
+      "birthday": "1970-07-30T00:00:00Z"
+    }
+  }]
