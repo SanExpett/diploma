@@ -325,12 +325,16 @@ func insertSubscriptions() error {
 		"nimbus",
 	))
 	if err != nil {
-		log.Fatal(err)
+		log.Printf("failed to connect to postgres: %v\n", err)
+
+		return err
 	}
 
 	s, err := newStorage(pool)
 	if err != nil {
-		log.Fatal(err)
+		log.Printf("failed to create storage: %v\n", err)
+
+		return err
 	}
 
 	subs := []domain.Subscription{
