@@ -124,6 +124,8 @@ func main() {
 	router.HandleFunc("/api/films/comments/remove", filmsPageHandlers.RemoveComment).Methods("POST", "OPTIONS")
 	router.HandleFunc("/api/films/{uuid}/comments", filmsPageHandlers.GetAllFilmComments).Methods("GET", "OPTIONS")
 
+	router.HandleFunc("/api/films/add_subscriptions", filmsPageHandlers.AddSubscriptions).Methods("POST", "OPTIONS")
+
 	router.HandleFunc("/api/profile/{uuid}/data", usersPageHandlers.GetProfileData).Methods("GET", "OPTIONS")
 	router.HandleFunc("/api/profile/{uuid}/edit", usersPageHandlers.ProfileEditByUuid).Methods("POST", "OPTIONS")
 	router.HandleFunc("/api/profile/{uuid}/preview", usersPageHandlers.GetProfilePreview).Methods("GET", "OPTIONS")

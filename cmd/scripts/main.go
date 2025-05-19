@@ -2,7 +2,6 @@ package main
 
 import (
 	"bytes"
-	"context"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -12,10 +11,6 @@ import (
 	"os"
 
 	"github.com/SanExpett/diploma/internal/domain"
-	myerrors "github.com/SanExpett/diploma/internal/errors"
-	"github.com/jackc/pgx/v5"
-	"github.com/jackc/pgx/v5/pgconn"
-	"github.com/jackc/pgx/v5/pgxpool"
 )
 
 func main() {
@@ -284,81 +279,23 @@ func insertComments() {
 	}
 }
 
-type PgxIface interface {
-	Begin(ctx context.Context) (pgx.Tx, error)
-	BeginTx(ctx context.Context, txOptions pgx.TxOptions) (pgx.Tx, error)
-	Close()
-	Exec(ctx context.Context, sql string, arguments ...any) (pgconn.CommandTag, error)
-	Query(ctx context.Context, sql string, args ...any) (pgx.Rows, error)
-	QueryRow(ctx context.Context, sql string, args ...any) pgx.Row
-}
-
-type storage struct {
-	pool PgxIface
-}
-
-func newStorage(pool PgxIface) (*storage, error) {
-	return &storage{
-		pool: pool,
-	}, nil
-}
-
-const insertSubscription = `INSERT INTO subscription (title, description, amount, duration) VALUES ($1, $2, $3, $4);`
-
-func (storage *storage) CreateSubscription(sub domain.Subscription) error {
-	_, err := storage.pool.Exec(context.Background(), insertSubscription, sub.Title, sub.Description, sub.Amount, sub.Duration)
-	if err != nil {
-		return fmt.Errorf("failed to create subscripion: %w: %w", err,
-			myerrors.ErrFailInExec)
-	}
-
-	return nil
-}
-
 func insertSubscriptions() error {
-	pool, err := pgxpool.New(context.Background(), fmt.Sprintf(
-		"host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
-		"127.0.0.1",
-		"5432",
-		"postgres",
-		"postgres",
-		"nimbus",
-	))
-	if err != nil {
-		log.Printf("failed to connect to postgres: %v\n", err)
+	client := &http.Client{}
 
+	subReq, err := http.NewRequest("POST", "http://127.0.0.1:8081/api/films/add_subscriptions", bytes.NewBuffer([]byte("{}")))
+	if err != nil {
+		log.Printf("failed to create subscrs request: %v\n", err)
 		return err
 	}
 
-	s, err := newStorage(pool)
-	if err != nil {
-		log.Printf("failed to create storage: %v\n", err)
+	subReq.Header.Set("Content-Type", "application/json")
 
+	subResp, err := client.Do(subReq)
+	if err != nil {
+		log.Printf("failed to post subscrs: %v\n", err)
 		return err
 	}
-
-	subs := []domain.Subscription{
-		{
-			Title:       "Ежемесячный платеж",
-			Description: "Наслаждайтесь обширной библиотекой фильмов и сериалов с разнообразным контентом.",
-			Amount:      299,
-			Duration:    1,
-		},
-		{
-			Title:       "Ежегодный платеж",
-			Description: "Покупка на 12 месяцев без продления. Выгоднее на 30%: 208₽ в месяц вместо 299₽ в месяц за ежемесячную подписку",
-			Amount:      2490,
-			Duration:    12,
-		},
-	}
-
-	for _, sub := range subs {
-		err = s.CreateSubscription(sub)
-		if err != nil {
-			log.Printf("failed to create subscription: %v \n", err)
-			return err
-		}
-	}
+	defer subResp.Body.Close()
 
 	return nil
 }
