@@ -157,7 +157,11 @@ func insertComments() {
 		"Unforgettable viewing experience",
 	}
 
-	for _, user := range users {
+	for i, user := range users {
+		if i%5 != 0 {
+			continue
+		}
+
 		// Login to get access cookie
 		loginData := map[string]string{
 			"login":    user.Email,
@@ -314,7 +318,7 @@ func (storage *storage) CreateSubscription(sub domain.Subscription) error {
 func insertSubscriptions() error {
 	pool, err := pgxpool.New(context.Background(), fmt.Sprintf(
 		"host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
-		"postgres",
+		"127.0.0.1",
 		"5432",
 		"postgres",
 		"postgres",
