@@ -131,6 +131,8 @@ func main() {
 	router.HandleFunc("/api/profile/{uuid}/preview", usersPageHandlers.GetProfilePreview).Methods("GET", "OPTIONS")
 	router.HandleFunc("/api/profile/{uuid}/subscriptions/check",
 		usersPageHandlers.HasSubscription).Methods("POST", "OPTIONS")
+	router.HandleFunc("/api/profile/remove",
+		usersPageHandlers.RemoveUser).Methods("POST", "OPTIONS")
 	router.HandleFunc("/api/profile/{uuid}/subscriptions/pay",
 		usersPageHandlers.PaySubscription).Methods("POST", "OPTIONS")
 	router.HandleFunc("/api/subscriptions/get", usersPageHandlers.GetSubscriptions).Methods("GET", "OPTIONS")

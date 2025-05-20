@@ -401,3 +401,35 @@ func (UserPageHandlers *UserPageHandlers) PaySubscription(w http.ResponseWriter,
 		return
 	}
 }
+
+func (UserPageHandlers *UserPageHandlers) RemoveUser(w http.ResponseWriter, r *http.Request) {
+	ctx := r.Context()
+	requestId := ctx.Value(reqid.ReqIDKey)
+
+	var request domain.RemoveUserRequest
+	err := json.NewDecoder(r.Body).Decode(&request)
+	if err != nil {
+		UserPageHandlers.logger.Errorf("[reqid=%s] failed to decode: %v\n", requestId, myerrors.ErrFailedDecode)
+		err = WriteError(w, r, UserPageHandlers.metrics, err)
+		if err != nil {
+			UserPageHandlers.logger.Errorf("[reqid=%s] failed to write response: %v\n", requestId, err)
+		}
+		return
+	}
+
+	_, err = (*UserPageHandlers.usersClient).RemoveUser(ctx, &session.RemoveUserRequest{
+		Login: request.Login,
+	})
+	if err != nil {
+		err = WriteError(w, r, UserPageHandlers.metrics, err)
+		if err != nil {
+			UserPageHandlers.logger.Errorf("[reqid=%s] failed to write response: %v\n", requestId, err)
+		}
+		return
+	}
+
+	err = WriteSuccess(w, r, UserPageHandlers.metrics)
+	if err != nil {
+		UserPageHandlers.logger.Errorf("[reqid=%s] failed to write response: %v\n", requestId, err)
+	}
+}

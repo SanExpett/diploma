@@ -63,3 +63,7 @@ type SubsctiptionsResponse struct {
 type PayResponse struct {
 	Link string `json:"link"`
 }
+
+type RemoveUserRequest struct {
+	Login string `json:"login"`
+}
