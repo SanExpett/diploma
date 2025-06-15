@@ -1,6 +1,8 @@
 package repository
 
 import (
+	"encoding/json"
+	"os"
 	"regexp"
 	"testing"
 
@@ -211,8 +213,11 @@ func TestUsersStorage_ChangeUserName(t *testing.T) {
 		WithArgs(email).
 		WillReturnRows(mockRows)
 
-	_, err = storage.ChangeUserName(email, newUsername)
+	userChanged, err := storage.ChangeUserName(email, newUsername)
 	require.Equal(t, nil, err)
+
+	userChangedB, _ := json.Marshal(userChanged)
+	os.WriteFile("ChangeUserName_output.json", userChangedB, 0644)
 
 	err = mock.ExpectationsWereMet()
 	require.NoError(t, err)

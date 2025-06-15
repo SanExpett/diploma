@@ -112,6 +112,9 @@ func TestFilmsServer_GetAllFilmComments(t *testing.T) {
 	}
 	mockService.EXPECT().GetAllFilmComments(ctx, filmUuid).Return(expectedComments, nil)
 
+	resB, _ := json.Marshal(expectedComments)
+	os.WriteFile("tests_data/output/GetAllFilmComments.json", resB, os.ModePerm)
+
 	req := &session.AllFilmCommentsRequest{FilmUuid: filmUuid}
 	resp, err := server.GetAllFilmComments(ctx, req)
 

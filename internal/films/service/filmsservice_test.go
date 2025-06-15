@@ -102,8 +102,8 @@ func TestRemoveFilm_Error(t *testing.T) {
 	service := NewFilmsService(mockStorage, metrics, mockLogger, "")
 
 	uuid := "123"
-	mockError := errors.New("mocks error")
 
+	mockError := errors.New("mocks error")
 	mockStorage.EXPECT().RemoveFilm(uuid).Return(mockError)
 
 	err := service.RemoveFilm(context.Background(), uuid)
@@ -112,16 +112,22 @@ func TestRemoveFilm_Error(t *testing.T) {
 }
 
 func TestGetFilmPreview(t *testing.T) {
+	// Создаем контроллер для управления моками
 	ctrl := gomock.NewController(t)
+	// Освобождаем ресурсы после завершения теста
 	defer ctrl.Finish()
 
+	// Инициализируем мок хранилища фильмов
 	mockStorage := mocks.NewMockFilmsStorage(ctrl)
+	// Создаем тестовый логгер
 	mockLogger := zaptest.NewLogger(t).Sugar()
+	// Инициализируем метрики для сервиса фильмов
+	metr := metrics.NewGrpcMetrics("films")
 
-	metrics := metrics.NewGrpcMetrics("films")
+	// Создаем экземпляр сервиса с моками
+	service := NewFilmsService(mockStorage, metr, mockLogger, "")
 
-	service := NewFilmsService(mockStorage, metrics, mockLogger, "")
-
+	// Задаем тестовые данные
 	uuid := "123"
 	mockFilmPreview := domain.FilmPreview{
 		Uuid:         uuid,
@@ -133,12 +139,15 @@ func TestGetFilmPreview(t *testing.T) {
 		Duration:     120,
 	}
 
+	// Настраиваем ожидаемое поведение мока хранилища
 	mockStorage.EXPECT().GetFilmPreview(uuid).Return(mockFilmPreview, nil)
 
+	// Вызываем тестируемый метод
 	filmPreview, err := service.GetFilmPreview(context.Background(), uuid)
 
-	assert.NoError(t, err)
-	assert.Equal(t, mockFilmPreview, filmPreview)
+	// Проверяем результаты
+	assert.NoError(t, err)                        // Проверяем что ошибки нет
+	assert.Equal(t, mockFilmPreview, filmPreview) // Проверяем что вернулись ожидаемые данные
 }
 
 func TestGetFilmPreview_Error(t *testing.T) {

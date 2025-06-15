@@ -13,6 +13,12 @@ import (
 	"github.com/SanExpett/diploma/internal/domain"
 )
 
+// СКРИПТ ДЛЯ ЗАПОЛНЕНИЯ БАЗЫ ДАННЫХ, СОЗДАЕТ:
+// - ПОДПИСКИ
+// - ФИЛЬМЫ (ПО ПОДПИСКЕ И БЕЗ)
+// - АКТЕРОВ И РЕЖИССЕРОВ
+// - ПОЛЬЗОВАТЕЛЕЙ
+// - КАЖДЫЙ 5ЫЙ ПОЛЬЗОВАТЕЛЬ КАЖДОМУ ФИЛЬМУ ДОБАВЛЯЕТ ОТЗЫВ СО СЛУЧАЙНОЙ ОЦЕНКОЙ
 func main() {
 	if err := insert(); err != nil {
 		log.Fatal(err)
@@ -48,6 +54,18 @@ func insert() error {
 	return nil
 }
 
+func testStructs() {
+	ud := &domain.UserSignUp{
+		Email:    "alexkrasnoperov@mail.ru",
+		Name:     "Alex",
+		Password: "flasklj123!",
+	}
+
+	udJSON, _ := json.Marshal(ud)
+
+	os.WriteFile("cmd/scripts/users.json", udJSON, os.ModePerm)
+}
+
 func insertInternal() error {
 	jsonData, err := os.ReadFile("cmd/scripts/data/internal.json")
 	if err != nil {
@@ -79,6 +97,10 @@ func insertInternal() error {
 		}
 	}
 
+	log.Printf("films successfully added\n" +
+		"direcors successfully added\n" +
+		"actors successfully added\n")
+
 	return nil
 }
 
@@ -103,8 +125,6 @@ func insertUsers() error {
 		}
 		defer resp.Body.Close()
 
-		log.Printf("resp cookies: %v \n", resp.Cookies())
-
 		body, err := io.ReadAll(resp.Body)
 		if err != nil {
 			log.Printf("failed to read response: %v \n", err)
@@ -116,6 +136,8 @@ func insertUsers() error {
 			return fmt.Errorf("signup failed: %s", string(body))
 		}
 	}
+
+	log.Println("users successfully added")
 
 	return nil
 }
@@ -277,6 +299,8 @@ func insertComments() {
 			}
 		}
 	}
+
+	log.Println("comments successfully added")
 }
 
 func insertSubscriptions() error {
@@ -296,6 +320,8 @@ func insertSubscriptions() error {
 		return err
 	}
 	defer subResp.Body.Close()
+
+	log.Println("subscriptions successfully added")
 
 	return nil
 }

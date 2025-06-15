@@ -3,6 +3,7 @@ package cache
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 
 	"github.com/redis/go-redis/v9"
@@ -154,26 +155,32 @@ func (sessionStorage *SessionStorage) CheckVersion(login string, token string, u
 	return false, myerrors.ErrWrongSessionVersion
 }
 
+// HasSession проверяет наличие активной сессии для пользователя
+// Возвращает:
+//   - nil если сессия существует
+//   - ErrNoSuchUser если пользователь или токен не найдены
+//   - другие ошибки при проблемах с Redis или JSON
 func (sessionStorage *SessionStorage) HasSession(login string, token string) error {
-	ctx := context.Background()
-
+	// Подготавливаем хеш-таблицу для хранения сессий пользователя
 	sessions := make(map[string]uint32)
-	val, err := sessionStorage.redisClient.Get(ctx, login).Result()
-	if err == redis.Nil {
+	// Получаем данные из Redis по ключу = логину пользователя
+	val, err := sessionStorage.redisClient.Get(context.Background(), login).Result()
+	if errors.Is(err, redis.Nil) {
 		return myerrors.ErrNoSuchUser
 	}
+	// Обрабатываем другие ошибки Redis
 	if err != nil {
 		return err
 	}
-
-	if err := json.Unmarshal([]byte(val), &sessions); err != nil {
+	// Декодируем JSON с сессиями пользователя
+	if err = json.Unmarshal([]byte(val), &sessions); err != nil {
 		return err
 	}
-
+	// Проверяем наличие конкретного токена в списке сессий
 	if _, exists := sessions[token]; !exists {
 		return myerrors.ErrNoSuchUser
 	}
-
+	// Если все проверки пройдены - сессия существует
 	return nil
 }
 

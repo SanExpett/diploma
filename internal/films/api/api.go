@@ -53,20 +53,26 @@ func NewFilmsServer(service FilmsService, logger *zap.SugaredLogger) *FilmsServe
 
 func (server *FilmsServer) GetAllFilmsPreviews(ctx context.Context,
 	req *session.AllFilmsPreviewsRequest) (res *session.AllFilmsPreviewsResponse, err error) {
+	// Получаем идентификатор запроса из контекста
 	requestId := ctx.Value(reqid.ReqIDKey)
+
+	// Запрашиваем все превью фильмов через сервис
 	films, err := server.filmsService.GetAllFilmsPreviews(ctx)
 	if err != nil {
+		// Логируем ошибку и возвращаем её клиенту
 		server.logger.Errorf("[reqid=%s] failed to get all films previews: %v\n",
 			requestId, err)
 		return nil, fmt.Errorf("[reqid=%s] failed to get all films previews: %v\n",
 			requestId, err)
 	}
 
+	// Конвертируем полученные фильмы во внутренний формат proto
 	var filmsConverted []*session.FilmPreview
 	for _, film := range films {
 		filmsConverted = append(filmsConverted, convertFilmPreviewToProto(&film))
 	}
 
+	// Формируем и возвращаем ответ с списком превью фильмов
 	return &session.AllFilmsPreviewsResponse{
 		Films: filmsConverted,
 	}, nil
